@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StackSolutions – 404</title>
+
+    <meta
+      name="description"
+      content="StackSolutions provides end-to-end IT solutions including web development, software engineering, UI/UX design, cloud services, and scalable digital products for modern businesses."
+    />
+
+    <meta
+      name="keywords"
+      content="StackSolutions, IT solutions, software development, web development, UI UX design, cloud services, digital transformation, technology solutions"
+    />
+
+    <meta name="author" content="StackSolutions" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="StackSolutions – Innovative IT & Digital Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Empowering businesses with cutting-edge IT solutions, scalable software, and modern digital experiences."
+    />
+    <meta property="og:site_name" content="StackSolutions" />
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+    <!-- ScrollSmoother  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <!-- SplitText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/EasePack.min.js"></script>
+
+    <!-- SplitType -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GOOGLE FONT CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Della+Respira&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Julius+Sans+One&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Rajdhani:wght@300;400;500;600;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TAILWIND LINK -->
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <!-- 404 CSS -->
+    <style>
+      .primary-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 40px rgba(199, 255, 26, 0.35);
+      }
+
+      .secondary-btn:hover {
+        background-color: #c7ff1a;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white overflow-hidden">
+    <!-- 404 -->
+    <section
+      class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
+    >
+      <!-- BIG 404 BACKGROUND -->
+      <div
+        class="absolute inset-0 flex items-center justify-center pointer-events-none"
+      >
+        <span
+          class="text-[22rem] font-black text-white/5 leading-none error-bg"
+        >
+          404
+        </span>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="relative z-10 max-w-3xl text-center error-root">
+        <span class="text-lime-400 uppercase tracking-widest text-sm error-tag">
+          Page Not Found
+        </span>
+
+        <h1 class="text-6xl font-bold leading-tight mt-6 error-title">
+          You’ve Hit a<br />
+          Dead End.
+        </h1>
+
+        <p class="text-zinc-400 mt-6 max-w-xl mx-auto error-text">
+          The page you’re looking for doesn’t exist, was moved, or is
+          temporarily unavailable.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center mt-12 error-actions"
+        >
+          <a
+            href="./index.html"
+            class="primary-btn bg-lime-400 text-black px-10 py-4 rounded-full font-medium inline-flex items-center gap-3 transition"
+          >
+            Back to Home
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a
+            href="./404.html"
+            class="secondary-btn border border-zinc-700 px-10 py-4 rounded-full font-medium inline-flex items-center gap-3 transition"
+          >
+            Contact Support
+            <i class="fa-solid fa-headset"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 404 GSAP -->
+    <script>
+      // Initial states
+      gsap.set(".error-root", { opacity: 0, y: 40 });
+      gsap.set(".error-bg", { opacity: 0, scale: 0.9 });
+
+      // Main entrance
+      gsap.to(".error-root", {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.2,
+      });
+
+      gsap.to(".error-bg", {
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        delay: 0.1,
+      });
+
+      // Floating 404
+      gsap.to(".error-bg", {
+        y: -20,
+        duration: 4,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+      });
+
+      // Stagger inner elements
+      gsap.from(
+        [".error-tag", ".error-title", ".error-text", ".error-actions"],
+        {
+          opacity: 0,
+          y: 30,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          delay: 0.4,
+        },
+      );
+    </script>
+  </body>
+</html>

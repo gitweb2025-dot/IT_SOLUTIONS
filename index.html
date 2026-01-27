@@ -161,6 +161,18 @@
       }
     </style>
 
+    <!-- VIDEO CSS -->
+    <style>
+      .play-btn:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 10px rgba(199, 255, 26, 0.15);
+      }
+
+      .close-btn:hover {
+        transform: scale(1.1);
+      }
+    </style>
+
     <!-- TEAMS CSS -->
     <style>
       .team-card img {
@@ -209,6 +221,20 @@
     <style>
       .step-circle:hover {
         transform: scale(1.08);
+      }
+    </style>
+
+    <!-- MISS OUT CSS -->
+    <style>
+      .subscribe-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      }
+
+      .social-icon:hover {
+        transform: scale(1.12);
+        background-color: #000;
+        color: #c7ff1a;
       }
     </style>
 
@@ -936,6 +962,44 @@
       </div>
     </section>
 
+    <!-- VIDEO THUMBNAIL -->
+    <section class="py-28">
+      <div class="max-w-6xl mx-auto px-6 relative video-thumb-root">
+        <img
+          src="./src/assets/b1.webp"
+          class="rounded-3xl w-full object-cover"
+          alt="vid"
+        />
+
+        <button
+          class="play-btn absolute inset-0 m-auto w-20 h-20 rounded-full bg-primary text-black flex items-center justify-center transition video-open-btn"
+          aria-label="Play video"
+        >
+          <i class="fa-solid fa-play text-2xl"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div
+      class="fixed inset-0 z-50 video-modal-root flex items-center justify-center"
+    >
+      <div class="absolute inset-0 bg-black/80 video-overlay"></div>
+
+      <div class="relative max-w-4xl w-full px-6 video-modal-box">
+        <div class="relative bg-black rounded-2xl overflow-hidden aspect-video">
+          <button
+            class="close-btn absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition video-close-btn"
+            aria-label="Close video"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="w-full h-full video-frame-slot"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- TEAMS -->
     <section class="py-24 overflow-hidden">
       <div class="max-w-7xl mx-auto px-6">
@@ -948,7 +1012,9 @@
               Meet Our Team
             </span>
 
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6"
+            >
               Creative Minds Behind<br />
               our Team.
             </h2>
@@ -1074,7 +1140,7 @@
     </section>
 
     <!-- STEPS -->
-    <section class="py-28 overflow-hidden">
+    <section class="py-24 overflow-hidden">
       <div class="max-w-7xl mx-auto px-6">
         <!-- Header -->
         <div class="text-center mb-24 process-anim-header">
@@ -1082,7 +1148,9 @@
             Our Working Process
           </span>
 
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6">
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6"
+          >
             Transform Your Business<br />
             in 3<br />
             Simple Steps.
@@ -1159,7 +1227,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="py-28 relative overflow-hidden">
+    <section class="py-24 relative overflow-hidden">
       <div
         class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-start contact-anim-root"
       >
@@ -1169,7 +1237,9 @@
             Get in Touch
           </span>
 
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6 mb-10">
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6 mb-10"
+          >
             Have any Questions<br />
             on Mind? Get in<br />
             Touch for Market<br />
@@ -1279,7 +1349,7 @@
     </section>
 
     <!-- INSIGHTS -->
-    <section class="py-28 overflow-hidden">
+    <section class="py-24 overflow-hidden">
       <div class="max-w-7xl mx-auto px-6">
         <!-- Header -->
         <div class="text-center mb-20 insight-anim-header">
@@ -1287,7 +1357,9 @@
             Insights & Innovation
           </span>
 
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-6 leading-tight">
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-bold mt-6 leading-tight"
+          >
             Explore Latest Insights, &<br />Innovations.
           </h2>
         </div>
@@ -1429,12 +1501,83 @@
       </div>
     </section>
 
+    <!-- MISS OUT -->
+    <section class="py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="bg-primary rounded-3xl px-12 py-14 grid lg:grid-cols-2 gap-12 items-center cta-anim-root"
+        >
+          <!-- LEFT -->
+          <div class="cta-anim-left">
+            <h2 class="text-5xl font-bold text-black leading-tight">
+              Don’t Miss Out<br />
+              the Future!
+            </h2>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="cta-anim-right">
+            <form
+              id="subscribeForm"
+              class="flex items-center bg-black rounded-full p-2 mb-6 max-w-xl"
+            >
+              <input
+                id="emailInput"
+                type="email"
+                required
+                placeholder="Enter email here..."
+                class="flex-1 bg-transparent outline-none px-6 text-sm text-white"
+              />
+
+              <button
+                type="submit"
+                class="subscribe-btn bg-zinc-900 text-white px-6 py-3 rounded-full flex items-center gap-3 transition"
+              >
+                Subscribe Now
+                <span
+                  class="w-9 h-9 rounded-full bg-primary text-black flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-bell"></i>
+                </span>
+              </button>
+            </form>
+
+            <div class="flex items-center gap-4 text-black">
+              <span class="text-sm font-medium">Follow us:</span>
+
+              <a
+                class="social-icon w-9 h-9 rounded-full bg-black text-primary flex items-center justify-center transition"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+              <a
+                class="social-icon w-9 h-9 rounded-full bg-black text-primary flex items-center justify-center transition"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a
+                class="social-icon w-9 h-9 rounded-full bg-black text-primary flex items-center justify-center transition"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+
+              <a
+                class="social-icon w-9 h-9 rounded-full bg-black text-primary flex items-center justify-center transition"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="relative overflow-hidden">
       <!-- Background glow / waves (approximation only) -->
-      <div
-        class="absolute inset-0  opacity-80"
-      ></div>
+      <div class="absolute inset-0 opacity-80"></div>
 
       <div class="relative max-w-7xl mx-auto px-6 footer-anim-root">
         <!-- Top Grid -->
@@ -1818,6 +1961,62 @@
       });
     </script>
 
+    <!-- VIDEO GSAP -->
+    <script>
+      // DOM
+      const openVidBtn = document.querySelector(".video-open-btn");
+      const closeVidBtn = document.querySelector(".video-close-btn");
+      const modal = document.querySelector(".video-modal-root");
+      const overlay = document.querySelector(".video-overlay");
+      const modalBox = document.querySelector(".video-modal-box");
+      const frameSlot = document.querySelector(".video-frame-slot");
+
+      // INITIAL STATE (NO hidden / display none)
+      gsap.set(modal, {
+        autoAlpha: 0,
+        pointerEvents: "none",
+      });
+
+      // GSAP TIMELINE
+      const modalTl = gsap.timeline({ paused: true });
+
+      modalTl
+        .set(modal, { autoAlpha: 1, pointerEvents: "auto" })
+        .fromTo(overlay, { opacity: 0 }, { opacity: 1, duration: 0.4 })
+        .fromTo(
+          modalBox,
+          { opacity: 0, scale: 0.85, y: 40 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "power3.out" },
+          "-=0.2",
+        );
+
+      // OPEN
+      openVidBtn.addEventListener("click", () => {
+        frameSlot.innerHTML = `
+    <iframe
+      src="https://www.youtube.com/embed/MLpWrANjFbI?si=E4gMF9eDzG334vd7"
+      class="w-full h-full"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  `;
+        modalTl.play(0);
+      });
+
+      // CLOSE
+      function closeModal() {
+        modalTl.reverse();
+        gsap.delayedCall(0.6, () => {
+          frameSlot.innerHTML = "";
+          gsap.set(modal, { pointerEvents: "none" });
+        });
+      }
+
+      closeVidBtn.addEventListener("click", closeModal);
+      overlay.addEventListener("click", closeModal);
+    </script>
+
     <!-- TEAMS GSAP -->
     <script>
       gsap.registerPlugin(ScrollTrigger);
@@ -1963,6 +2162,67 @@
 
         // Redirect after submit
         window.location.href = "./404.html";
+      });
+    </script>
+
+    <!-- MISS OUT GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* Entrance animation */
+      gsap.from(".cta-anim-left", {
+        opacity: 0,
+        x: -80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".cta-anim-root",
+          start: "top 80%",
+        },
+      });
+
+      gsap.from(".cta-anim-right", {
+        opacity: 0,
+        x: 80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".cta-anim-root",
+          start: "top 80%",
+        },
+      });
+
+      /* Form logic */
+      const formMiss = document.getElementById("subscribeForm");
+      const emailInput = document.getElementById("emailInput");
+
+      formMiss.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = emailInput.value.trim();
+
+        if (!email.endsWith("@gmail.com")) {
+          emailInput.setCustomValidity("Accept only @gmail.com");
+          emailInput.title = "Accept only @gmail.com";
+          emailInput.reportValidity();
+          return;
+        }
+
+        // clear validation
+        emailInput.setCustomValidity("");
+        emailInput.title = "";
+
+        // reset field
+        formMiss.reset();
+
+        // redirect
+        window.location.href = "./404.html";
+      });
+
+      /* clear error while typing */
+      emailInput.addEventListener("input", () => {
+        emailInput.setCustomValidity("");
+        emailInput.title = "";
       });
     </script>
 
