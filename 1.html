@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tekmino Navbar</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <style>
+    body {
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      min-height: 200vh;
+    }
+
+    /* Hover effects ONLY via CSS */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: #c7f000;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 right-0 z-50">
+  <nav
+    id="navbar"
+    class="max-w-7xl mx-auto mt-6 px-6 py-4
+           flex items-center justify-between
+           rounded-full backdrop-blur-xl
+           bg-white/10 border border-white/10"
+  >
+
+    <!-- LOGO -->
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-lime-400 flex items-center justify-center text-black font-bold">
+        T
+      </div>
+      <span class="text-xl font-semibold">Tekmino</span>
+    </div>
+
+    <!-- DESKTOP LINKS -->
+    <div class="hidden lg:flex items-center gap-8 text-gray-300 font-medium">
+      <a class="nav-link text-lime-400">Home</a>
+      <a class="nav-link">Pages</a>
+      <a class="nav-link">Services</a>
+      <a class="nav-link">Projects</a>
+      <a class="nav-link">Blog</a>
+      <a class="nav-link">Contact</a>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="flex items-center gap-4">
+      <button class="w-11 h-11 rounded-full bg-black flex items-center justify-center">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <a
+        class="hidden md:flex items-center gap-3
+               bg-lime-400 text-black px-6 py-3 rounded-full font-semibold"
+      >
+        Get Started
+        <span class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+
+      <!-- HAMBURGER -->
+      <button class="ham-icon lg:hidden w-11 h-11 rounded-full bg-black flex items-center justify-center">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div
+  class="mobile-menu fixed inset-0 z-40 bg-black
+         flex flex-col justify-center items-center gap-8
+         pointer-events-none"
+>
+  <a class="menu-link text-3xl font-semibold">Home</a>
+  <a class="menu-link text-3xl font-semibold">Pages</a>
+  <a class="menu-link text-3xl font-semibold">Services</a>
+  <a class="menu-link text-3xl font-semibold">Projects</a>
+  <a class="menu-link text-3xl font-semibold">Blog</a>
+  <a class="menu-link text-3xl font-semibold">Contact</a>
+
+  <button class="close-menu absolute top-8 right-8 w-12 h-12 rounded-full bg-white/10">
+    <i class="fa-solid fa-xmark text-xl"></i>
+  </button>
+</div>
+
+<!-- ================= GSAP ================= -->
+<script>
+  const menu = document.querySelector(".mobile-menu");
+  const links = document.querySelectorAll(".menu-link");
+  const openBtn = document.querySelector(".ham-icon");
+  const closeBtn = document.querySelector(".close-menu");
+
+  // Initial states
+  gsap.set(menu, {
+    scaleY: 0,
+    opacity: 0,
+    transformOrigin: "top",
+  });
+
+  gsap.set(links, {
+    opacity: 0,
+    y: -30,
+  });
+
+  // Timeline
+  const tl = gsap.timeline({
+    paused: true,
+    defaults: { ease: "power3.out" },
+  });
+
+  tl.to(menu, {
+    scaleY: 1,
+    opacity: 1,
+    duration: 0.6,
+    onStart: () => menu.classList.remove("pointer-events-none"),
+  })
+  .to(links, {
+    opacity: 1,
+    y: 0,
+    stagger: 0.12,
+    duration: 0.5,
+  }, "-=0.25");
+
+  // Open
+  openBtn.addEventListener("click", () => tl.play());
+
+  // Close
+  closeBtn.addEventListener("click", () => {
+    tl.reverse();
+    setTimeout(() => {
+      menu.classList.add("pointer-events-none");
+    }, 600);
+  });
+</script>
+
+</body>
+</html>

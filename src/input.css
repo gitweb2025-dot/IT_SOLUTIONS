@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "Bitter", serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --font-tertiary:  "Cinzel", serif;
+  --breakpoint-xsm: 380px;
+  --breakpoint-xsmd: 480px;
+  --breakpoint-mdx: 540px;
+  --breakpoint-mdxl: 800px;
+  --breakpoint-lgmd: 840px;
+  --breakpoint-xlmd: 912px;
+  --breakpoint-xllg: 1130px;
+  --color-primary: #d3ed31;
+  --color-secondary: #2f312a;
+  --color-tertiary: #191a18;
+  --color-fouthery: #062d16;
+}

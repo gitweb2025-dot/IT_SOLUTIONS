@@ -1,0 +1,2010 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StackSolutions – Innovative IT & Digital Solutions</title>
+
+    <meta
+      name="description"
+      content="StackSolutions provides end-to-end IT solutions including web development, software engineering, UI/UX design, cloud services, and scalable digital products for modern businesses."
+    />
+
+    <meta
+      name="keywords"
+      content="StackSolutions, IT solutions, software development, web development, UI UX design, cloud services, digital transformation, technology solutions"
+    />
+
+    <meta name="author" content="StackSolutions" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="StackSolutions – Innovative IT & Digital Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Empowering businesses with cutting-edge IT solutions, scalable software, and modern digital experiences."
+    />
+    <meta property="og:site_name" content="StackSolutions" />
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollToPlugin.min.js"></script>
+    <!-- ScrollSmoother  -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <!-- SplitText -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/EasePack.min.js"></script>
+
+    <!-- SplitType -->
+    <script src="https://unpkg.com/split-type"></script>
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GOOGLE FONT CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Della+Respira&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Julius+Sans+One&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Rajdhani:wght@300;400;500;600;700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- J-QUERY CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- LENIS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.17/dist/lenis.css"
+    />
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+    <!-- TAILWIND CSS -->
+    <link rel="stylesheet" href="./dist/output.css" />
+
+    <!-- HOME CSS -->
+    <style>
+      .wave-bg {
+        background:
+          radial-gradient(
+            circle at 70% 20%,
+            rgba(198, 255, 0, 0.15),
+            transparent 45%
+          ),
+          repeating-radial-gradient(
+            circle at center,
+            rgba(255, 255, 255, 0.04) 0,
+            rgba(255, 255, 255, 0.04) 1px,
+            transparent 1px,
+            transparent 18px
+          );
+      }
+
+      .cta-btn:hover {
+        background-color: #bdf200;
+      }
+
+      .cta-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .cta-btn:hover .cta-icon {
+        transform: rotate(45deg);
+      }
+    </style>
+
+    <!-- WHY CSS -->
+    <style>
+      .feature-card,
+      .icon-wrap {
+        transition: all 0.5s ease-in-out;
+      }
+
+      .feature-card:hover {
+        border-color: #c6ff00;
+        box-shadow:
+          0 0 0 1px #c6ff00,
+          0 20px 60px rgba(198, 255, 0, 0.15);
+      }
+
+      .feature-card:hover .icon-wrap {
+        background-color: #c6ff00;
+        color: #000;
+      }
+    </style>
+
+    <!-- ABOUT CSS  -->
+    <style>
+      .rotate-slow {
+        animation: spin 14s linear infinite;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- SERVICE CSS -->
+    <style>
+      .service-card {
+        transition: all 0.6s ease-in-out;
+      }
+
+      .service-card:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      }
+
+      .service-btn:hover {
+        background-color: #c7ff1a;
+        color: #000;
+      }
+    </style>
+
+    <!-- TEAMS CSS -->
+    <style>
+      .team-card img {
+        transition: all 0.5s ease-in-out;
+      }
+
+      .team-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .share-btn:hover {
+        background-color: #c7ff1a;
+        color: #000;
+      }
+
+      .more-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+      }
+    </style>
+
+    <!-- INSIGHTS CSS -->
+    <style>
+      .insight-card:hover {
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
+      }
+
+      .read-more:hover {
+        color: #c7ff1a;
+      }
+    </style>
+
+    <!-- CONTACT CSS -->
+    <style>
+      .contact-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+      }
+
+      .contact-input:hover {
+        border-color: #c7ff1a;
+      }
+    </style>
+
+    <!-- STEPS CSS -->
+    <style>
+      .step-circle:hover {
+        transform: scale(1.08);
+      }
+    </style>
+
+    <!-- FOOTER CSS -->
+    <style>
+      .footer-link:hover {
+        color: #c7ff1a;
+        transform: translateX(4px);
+      }
+
+      .store-btn:hover {
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+      }
+    </style>
+  </head>
+
+  <body class="font-tertiary bg-tertiary text-white overflow-x-hidden">
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-40">
+      <!-- DESKTOP NAV -->
+      <nav
+        class="max-w-7xl mx-auto flex items-center justify-between w-full px-3 md:px-6 lg:px-12 py-4 bg-secondary overflow-hidden"
+      >
+        <!-- LOGO -->
+        <div class="text-xl font-bold">
+          <h1 class="text-primary">StackSolutions</h1>
+        </div>
+
+        <!-- NAV _ LINKS -->
+        <div class="space-x-8 hidden xlmd:flex items-center">
+          <a href="./index.html">Home</a>
+          <a href="./404.html">About</a>
+          <a href="./404.html">Services</a>
+          <a href="./404.html">Blogs</a>
+          <a href="./404.html">Contact</a>
+        </div>
+
+        <!-- CTA BUTTON -->
+        <div class="hidden xlmd:block">
+          <a
+            href="./404.html"
+            class="group flex items-center gap-4 rounded-full bg-primary px-5 py-2 font-semibold text-black transition hover:bg-primary/60"
+          >
+            <span class="text-base">Get Started</span>
+
+            <span
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-black transition group-hover:scale-105"
+            >
+              <!-- Arrow Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2.5"
+                stroke="white"
+                class="h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- HAMBURGER ICON -->
+        <div
+          class="p-3 rounded-full bg-black block xlmd:hidden cursor-pointer mobile-open"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </div>
+      </nav>
+
+      <!-- MOBILE MENU -->
+      <nav
+        class="fixed inset-0 bg-black w-full h-screen flex flex-col items-center justify-center text-3xl md:text-4xl gap-6 text-white mobile-menu z-50"
+      >
+        <div
+          class="absolute top-6 right-4 size-12 flex items-center justify-center rounded-full bg-primary/50 text-lg mobile-close cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <a class="mobile-link" href="./index.html">Home</a>
+        <a class="mobile-link" href="./404.html">About</a>
+        <a class="mobile-link" href="./404.html">Services</a>
+        <a class="mobile-link" href="./404.html">Blogs</a>
+        <a class="mobile-link" href="./404.html">Contact</a>
+        <a class="mobile-link" href="./404.html">Get Started</a>
+      </nav>
+    </header>
+
+    <!-- HOME -->
+    <section class="relative overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-12 py-6 grid xl:grid-cols-2 gap-16 items-center"
+      >
+        <!-- LEFT -->
+        <div class="space-y-8">
+          <span
+            class="text-[#c6ff00] tracking-[0.25em] text-sm font-semibold block"
+          >
+            [ TRANSFORMING IDEAS ]
+          </span>
+
+          <h1
+            class="hero-title text-white font-bold leading-tight text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+          >
+            Innovative Tech Solutions for Business.
+          </h1>
+
+          <div class="flex flex-wrap items-center gap-6 cta-but">
+            <a
+              href="./404.html"
+              class="group flex items-center gap-4 rounded-full bg-primary px-6 py-2 font-semibold text-black get-1"
+            >
+              <span class="text-base">Get Started</span>
+
+              <span
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-black transition group-hover:scale-105"
+              >
+                <!-- Arrow Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2.5"
+                  stroke="white"
+                  class="h-5 w-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                  />
+                </svg>
+              </span>
+            </a>
+
+            <div
+              class="flex items-center gap-2 text-[#c6ff00] font-medium get-1"
+            >
+              <i class="fa-solid fa-phone"></i>
+              +1 (888) 333-8181
+            </div>
+          </div>
+
+          <div class="flex gap-6 pt-6 text-white/90 cont">
+            <div class="flex items-center gap-2 cont-1">
+              <i class="fa-solid fa-circle-check text-[#c6ff00]"></i>
+              Innovate Smarter
+            </div>
+            <div class="flex items-center gap-2 cont-1">
+              <i class="fa-solid fa-circle-check text-[#c6ff00]"></i>
+              Technology Simplified
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="relative">
+          <div class="overflow-hidden rounded-3xl hero-image">
+            <img
+              src="./src/assets/home.webp"
+              class="w-full h-full rounded-3xl object-cover"
+              alt="home"
+            />
+          </div>
+
+          <!-- Trusted badge -->
+          <div
+            class="absolute -left-10 top-20 bg-white/10 backdrop-blur-xl px-4 py-3 rounded-xl flex items-center gap-3 badge-1"
+          >
+            <!-- <i class="fa-solid fa-shield-check text-[#c6ff00]"></i> -->
+            <span class="text-white text-sm font-medium">
+              Trusted by 800+<br />Tech Giants.
+            </span>
+          </div>
+
+          <!-- Rating -->
+          <div class="rating">
+            <div
+              class="absolute -bottom-12 right-0 bg-black border-8 border-gray-900/50 p-6 rounded-2xl text-white w-72 rating-1"
+            >
+              <div class="flex -space-x-3 mb-4">
+                <img
+                  class="w-10 h-10 rounded-full border-2 border-black"
+                  src="https://randomuser.me/api/portraits/men/11.jpg"
+                />
+                <img
+                  class="w-10 h-10 rounded-full border-2 border-black"
+                  src="https://randomuser.me/api/portraits/men/12.jpg"
+                />
+                <img
+                  class="w-10 h-10 rounded-full border-2 border-black"
+                  src="https://randomuser.me/api/portraits/men/13.jpg"
+                />
+                <img
+                  class="w-10 h-10 rounded-full border-2 border-black"
+                  src="https://randomuser.me/api/portraits/men/14.jpg"
+                />
+              </div>
+
+              <div class="flex items-center gap-2">
+                <span class="text-4xl font-bold">4.9</span>
+                <div class="text-[#c6ff00]">★★★★★</div>
+              </div>
+
+              <p class="text-white/70 text-sm mt-1">
+                Based on 600+ Google Reviews.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why-section py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADER -->
+        <div
+          class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-16"
+        >
+          <div class="max-w-3xl">
+            <span
+              class="text-[#c6ff00] tracking-[0.25em] text-sm font-semibold block mb-4"
+            >
+              [ WHY CHOOSE US ]
+            </span>
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight reveal-type"
+            >
+              Reliable IT Solution, for<br />
+              Best Results.
+            </h2>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-10">
+            <p class="text-white/70 max-w-xs">
+              Our services are customized to meet your unique.
+            </p>
+
+            <a
+              href="./404.html"
+              class="group flex items-center gap-4 rounded-full bg-primary px-6 py-2 font-semibold text-black"
+            >
+              <span class="text-base">Learn More</span>
+
+              <span
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-black transition group-hover:scale-105"
+              >
+                <!-- Arrow Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2.5"
+                  stroke="white"
+                  class="h-5 w-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARDS -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 why-grid"
+        >
+          <!-- CARD 1 -->
+          <div class="why-card">
+            <div
+              class="feature-card border border-white/40 rounded-2xl p-8 bg-white/5 h-full"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-full bg-[#c6ff00] text-black flex items-center justify-center mb-8"
+              >
+                <i class="fa-regular fa-thumbs-up text-xl"></i>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4">Proven Track Record</h3>
+              <p class="text-white/70 leading-relaxed">
+                With a portfolio of successful projects and satisfied clients,
+                we have a reputation.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="why-card">
+            <div
+              class="feature-card border border-white/40 rounded-2xl p-8 bg-white/5 h-full"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-full bg-secondary border border-white/10 text-[#c6ff00] flex items-center justify-center mb-8"
+              >
+                <i class="fa-regular fa-lightbulb text-xl"></i>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4">Tailored Solutions</h3>
+              <p class="text-white/70 leading-relaxed">
+                Our services are customized to meet your unique business needs,
+                ensuring solution.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="why-card">
+            <div
+              class="feature-card border border-white/40 rounded-2xl p-8 bg-white/5 h-full"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-full bg-secondary border border-white/10 text-[#c6ff00] flex items-center justify-center mb-8"
+              >
+                <i class="fa-solid fa-rocket text-xl"></i>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4">Future Technologies</h3>
+              <p class="text-white/70 leading-relaxed">
+                Stay ahead of the competition with AI, cloud computing, and
+                automation solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="why-card">
+            <div
+              class="feature-card border border-white/40 rounded-2xl p-8 bg-white/5 h-full"
+            >
+              <div
+                class="icon-wrap w-14 h-14 rounded-full bg-secondary border border-white/10 text-[#c6ff00] flex items-center justify-center mb-8"
+              >
+                <i class="fa-regular fa-handshake text-xl"></i>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p class="text-white/70 leading-relaxed">
+                With a portfolio of successful projects and satisfied clients,
+                we have a reputation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section
+      class="about-section relative bg-black text-white py-24 overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center"
+      >
+        <!-- LEFT IMAGE BLOCK -->
+        <div class="about-left relative h-full">
+          <div class="about-image-wrap h-full rounded-3xl overflow-hidden">
+            <img
+              src="./src/assets/about.webp"
+              alt="Team Discussion"
+              class="w-full h-full rounded-3xl object-cover"
+            />
+          </div>
+
+          <!-- EXPERIENCE BADGE -->
+          <div
+            class="about-exp-badge absolute top-0 right-0 bg-primary text-black rounded-2xl p-5 w-44"
+          >
+            <h3 class="text-3xl md:text-4xl font-bold">20+</h3>
+            <p class="text-sm mt-1">
+              Years of Excellence in IT Solutions Company.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="about-right">
+          <p class="text-primary tracking-widest text-sm mb-4">
+            [ ABOUT TEKMINO ]
+          </p>
+
+          <h2
+            class="about-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 reveal-type"
+          >
+            Delivering Solution That Drive Our Innovation & Fast Success.
+          </h2>
+
+          <p class="text-gray-400 max-w-lg mb-8">
+            We are a team of passionate tech experts delivering innovative IT
+            solutions tailored to help businesses grow, adapt, and thrive in a
+            digital. Stay ahead of the competition.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-8 mb-4">
+            <!-- STATS -->
+            <div class="flex gap-10">
+              <div>
+                <h3 class="text-4xl font-bold text-primary">3K+</h3>
+                <p class="text-gray-400 text-sm mt-1">Successful Projects.</p>
+              </div>
+              <div>
+                <h3 class="text-4xl font-bold text-primary">98+</h3>
+                <p class="text-gray-400 text-sm mt-1">IT Professionals.</p>
+              </div>
+            </div>
+
+            <!-- Badge -->
+            <div
+              class="relative w-48 h-48 rounded-full bg-black flex items-center justify-center"
+            >
+              <!-- Dotted ring -->
+              <div
+                class="absolute inset-0 rounded-full border border-dotted border-primary opacity-60"
+              ></div>
+
+              <!-- Rotating circular text -->
+              <svg class="absolute inset-0 rotate-slow" viewBox="0 0 200 200">
+                <defs>
+                  <path
+                    id="circlePath"
+                    d="M 100,100
+               m -75,0
+               a 75,75 0 1,1 150,0
+               a 75,75 0 1,1 -150,0"
+                  />
+                </defs>
+
+                <text fill="white" font-size="12" letter-spacing="3">
+                  <textPath href="#circlePath" startOffset="0%">
+                    AWARD WINING AGENCY • SINCE 2019 • IT SOLUTION •
+                  </textPath>
+                </text>
+              </svg>
+
+              <!-- Center neon circle -->
+              <div
+                class="relative z-10 w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-lg"
+              >
+                <!-- Simple icon -->
+                <svg
+                  class="w-8 h-8 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 2v8m0 0l3-3m-3 3l-3-3M4 14h16v6H4z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- BUTTON -->
+          <a
+            href="#"
+            class="inline-flex items-center gap-4 bg-zinc-900 hover-btn rounded-full px-6 py-3"
+          >
+            <span>Learn More</span>
+            <span
+              class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full"
+            >
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="grid lg:grid-cols-3 gap-16 items-center mb-20 serv-header">
+          <div class="h-full">
+            <span class="text-primary uppercase tracking-widest text-sm">
+              Explore Services
+            </span>
+
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-4 reveal-type"
+            >
+              Reliable IT<br />Solution for <br />Smarter.
+            </h2>
+
+            <div class="mt-8">
+              <a
+                href="#"
+                class="inline-flex items-center gap-4 bg-zinc-900 hover-btn rounded-full px-6 py-3"
+              >
+                <span>Explore More</span>
+                <span
+                  class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- card1  -->
+          <div class="serv-card h-full">
+            <div class="service-card bg-secondary/15 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-2">Managed IT Services</h3>
+              <p class="text-zinc-400 text-sm mb-6">
+                Comprehensive IT management, including monitoring, maintenance.
+              </p>
+
+              <ul class="space-y-2 text-sm text-zinc-300">
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>24/7 system
+                  monitoring
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>IT support
+                  & troubleshooting
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>Remote IT
+                  assistance
+                </li>
+              </ul>
+
+              <div class="mt-8">
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-4 bg-secondary/50 hover-btn rounded-full px-6 py-3"
+                >
+                  <span>Learn More</span>
+                  <span
+                    class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full"
+                  >
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="serv-card h-full">
+            <div class="service-card bg-secondary/50 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-2">
+                IT Consulting & Strategy
+              </h3>
+              <p class="text-zinc-400 text-sm mb-6">
+                Comprehensive IT management, including monitoring, maintenance.
+              </p>
+
+              <ul class="space-y-2 text-sm text-zinc-300">
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>24/7 system
+                  monitoring
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>IT support
+                  & troubleshooting
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>Remote IT
+                  assistance
+                </li>
+              </ul>
+
+              <div class="mt-8">
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-4 bg-secondary/50 hover-btn rounded-full px-6 py-3"
+                >
+                  <span>Learn More</span>
+                  <span
+                    class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full"
+                  >
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Card -->
+          <div class="serv-card h-full">
+            <div class="service-card bg-secondary/50 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-2">Network Infrastructure</h3>
+              <p class="text-zinc-400 text-sm mb-6">
+                Comprehensive IT management, including monitoring, maintenance.
+              </p>
+
+              <ul class="space-y-2 text-sm text-zinc-300">
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>24/7 system
+                  monitoring
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>IT support
+                  & troubleshooting
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>Remote IT
+                  assistance
+                </li>
+              </ul>
+
+              <div class="mt-8">
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-4 bg-secondary/50 hover-btn rounded-full px-6 py-3"
+                >
+                  <span>Learn More</span>
+                  <span
+                    class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full"
+                  >
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat Cards -->
+          <div class="serv-card h-full">
+            <div class="service-card bg-secondary/50 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-2">Cloud Computing</h3>
+              <p class="text-zinc-400 text-sm mb-6">
+                Scalable cloud-based services including migration and security.
+              </p>
+              <ul class="space-y-2 text-sm text-zinc-300">
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>Scalable
+                  storage
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>SaaS, PaaS,
+                  IaaS
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>Hybrid &
+                  multi-cloud
+                </li>
+              </ul>
+              <div class="mt-8">
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-4 bg-secondary/50 hover-btn rounded-full px-6 py-3"
+                >
+                  <span>Learn More</span>
+                  <span
+                    class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full"
+                  >
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="serv-card h-full">
+            <div class="service-card bg-secondary/50 rounded-2xl p-8">
+              <h3 class="text-xl font-semibold mb-2">
+                Cybersecurity Solutions
+              </h3>
+              <p class="text-zinc-400 text-sm mb-6">
+                Advanced security measures including threat detection.
+              </p>
+              <ul class="space-y-2 text-sm text-zinc-300">
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>Firewall
+                  protection
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>Threat
+                  prevention
+                </li>
+                <li>
+                  <i class="fa-solid fa-check text-primary mr-2"></i>Endpoint
+                  security
+                </li>
+              </ul>
+              <div class="mt-8">
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-4 bg-secondary/50 hover-btn rounded-full px-6 py-3"
+                >
+                  <span>Learn More</span>
+                  <span
+                    class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full"
+                  >
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAMS -->
+    <section class="py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div
+          class="grid lg:grid-cols-2 gap-20 items-start mb-20 team-anim-header"
+        >
+          <div>
+            <span class="text-primary uppercase tracking-widest text-sm">
+              Meet Our Team
+            </span>
+
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6">
+              Creative Minds Behind<br />
+              our Team.
+            </h2>
+          </div>
+
+          <div
+            class="grid md:grid-cols-2 items-end justify-between gap-5 h-full"
+          >
+            <p class="text-zinc-400 max-w-sm">
+              Our teams are customized to meet your unique ideas.
+            </p>
+
+            <a
+              href="./404.html"
+              class="inline-flex items-center gap-4 bg-secondary group hover-btn rounded-full px-6 py-3 w-fit"
+            >
+              <span>More Members</span>
+              <span
+                class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full transform -rotate-45 group-hover:rotate-0 transition duration-500 ease-in-out"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 team-anim-cards">
+          <!-- CARD -->
+          <div
+            class="team-card bg-zinc-900 rounded-2xl overflow-hidden team-anim-card"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="./src/assets/t1.webp"
+                class="w-full h-80 object-cover transition"
+                alt="team1"
+              />
+
+              <button
+                class="share-btn absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+            </div>
+
+            <div class="p-6">
+              <h4 class="text-lg font-semibold">Eade Marren</h4>
+              <p class="text-zinc-400 text-sm">Chief Executive</p>
+            </div>
+          </div>
+
+          <div
+            class="team-card bg-zinc-900 rounded-2xl overflow-hidden team-anim-card"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="./src/assets/t2.webp"
+                class="w-full h-80 object-cover transition"
+                alt="team2"
+              />
+
+              <button
+                class="share-btn absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+            </div>
+
+            <div class="p-6">
+              <h4 class="text-lg font-semibold">Savannah Nqueen</h4>
+              <p class="text-zinc-400 text-sm">Operations Head</p>
+            </div>
+          </div>
+
+          <div
+            class="team-card bg-zinc-900 rounded-2xl overflow-hidden team-anim-card"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="./src/assets/t3.webp"
+                class="w-full h-80 object-cover transition"
+                alt="team3"
+              />
+
+              <button
+                class="share-btn absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+            </div>
+
+            <div class="p-6">
+              <h4 class="text-lg font-semibold">Cameron William</h4>
+              <p class="text-zinc-400 text-sm">Marketing Lead</p>
+            </div>
+          </div>
+
+          <div
+            class="team-card bg-zinc-900 rounded-2xl overflow-hidden team-anim-card"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="./src/assets/t4.webp"
+                class="w-full h-80 object-cover transition"
+                alt="team4"
+              />
+
+              <button
+                class="share-btn absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
+            </div>
+
+            <div class="p-6">
+              <h4 class="text-lg font-semibold">Olivia Fox</h4>
+              <p class="text-zinc-400 text-sm">Business Director</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="py-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-24 process-anim-header">
+          <span class="text-primary uppercase tracking-widest text-sm">
+            Our Working Process
+          </span>
+
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6">
+            Transform Your Business<br />
+            in 3<br />
+            Simple Steps.
+          </h2>
+        </div>
+
+        <!-- Steps -->
+        <div class="grid md:grid-cols-3 gap-12 items-start process-anim-cards">
+          <!-- STEP 01 -->
+          <div class="relative process-anim-card">
+            <div
+              class="step-circle absolute -top-8 left-8 w-16 h-16 rounded-full bg-primary text-black flex items-center justify-center text-xl font-bold"
+            >
+              01.
+            </div>
+
+            <div
+              class="process-card bg-secondary/50 rounded-2xl p-8 pt-16 transition"
+            >
+              <h3 class="text-xl font-semibold mb-4">
+                Deep Discovery & Planning
+              </h3>
+
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Every great solution starts understanding. We take the time to
+                learn about your business, challenges, and goals.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 02 -->
+          <div class="relative process-anim-card">
+            <div
+              class="step-circle absolute -top-8 left-8 w-16 h-16 rounded-full bg-primary text-black flex items-center justify-center text-xl font-bold"
+            >
+              02.
+            </div>
+
+            <div
+              class="process-card bg-secondary/50 rounded-2xl p-8 pt-16 transition"
+            >
+              <h3 class="text-xl font-semibold mb-4">
+                Development & Implement
+              </h3>
+
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Every great solution starts understanding. We take the time to
+                learn about your business, challenges, and goals.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 03 -->
+          <div class="relative process-anim-card">
+            <div
+              class="step-circle absolute -top-8 left-8 w-16 h-16 rounded-full bg-primary text-black flex items-center justify-center text-xl font-bold"
+            >
+              03.
+            </div>
+
+            <div
+              class="process-card bg-secondary/50 rounded-2xl p-8 pt-16 transition"
+            >
+              <h3 class="text-xl font-semibold mb-4">Optimization & Support</h3>
+
+              <p class="text-zinc-400 text-sm leading-relaxed">
+                Every great solution starts understanding. We take the time to
+                learn about your business, challenges, and goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="py-28 relative overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-start contact-anim-root"
+      >
+        <!-- LEFT -->
+        <div class="contact-anim-left">
+          <span class="text-primary tracking-widest text-sm uppercase">
+            Get in Touch
+          </span>
+
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6 mb-10">
+            Have any Questions<br />
+            on Mind? Get in<br />
+            Touch for Market<br />
+            Experts.
+          </h2>
+
+          <button
+            class="contact-btn inline-flex items-center gap-3 bg-primary text-black px-8 py-4 rounded-full font-medium transition"
+          >
+            Contact Us Now
+            <i class="fa-solid fa-arrow-up-right"></i>
+          </button>
+
+          <div class="grid md:grid-cols-3 gap-10 mt-20 text-sm text-zinc-400">
+            <div>
+              <h4 class="text-white mb-2">Contact Info:</h4>
+              <p>+1 (009) 544-7818</p>
+              <p>support@tekmino.com</p>
+            </div>
+
+            <div>
+              <h4 class="text-white mb-2">Find Us:</h4>
+              <p>Renner Burg, West Rond,</p>
+              <p>MT 9421-030, USA.</p>
+            </div>
+
+            <div>
+              <h4 class="text-white mb-2">Contact Info:</h4>
+              <p>Mon – Fri <span class="text-primary">(Open)</span></p>
+              <p>09:00am – 06:00pm</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <form
+          id="contactForm"
+          class="bg-zinc-950 rounded-3xl p-10 contact-anim-right"
+          novalidate
+        >
+          <h3 class="text-3xl font-semibold mb-10">
+            Drop Us a <span class="text-primary">Line.</span>
+          </h3>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="text-sm text-zinc-400">Full Name *</label>
+              <input
+                type="text"
+                required
+                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+              />
+            </div>
+
+            <div>
+              <label class="text-sm text-zinc-400">Email Address *</label>
+              <input
+                type="email"
+                id="emailField"
+                required
+                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+              />
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label class="text-sm text-zinc-400">Phone Number *</label>
+              <input
+                type="text"
+                required
+                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+              />
+            </div>
+
+            <div>
+              <label class="text-sm text-zinc-400">Select Service *</label>
+              <select
+                required
+                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+              >
+                <option value="">Choose an Option</option>
+                <option>Cloud Computing</option>
+                <option>Cyber Security</option>
+                <option>IT Consulting</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-10">
+            <label class="text-sm text-zinc-400">Type Message</label>
+            <textarea
+              rows="4"
+              class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="contact-btn bg-primary text-black px-10 py-4 rounded-full font-medium inline-flex items-center gap-3 transition"
+          >
+            Send Message
+            <i class="fa-solid fa-arrow-up-right"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section class="py-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="text-center mb-20 insight-anim-header">
+          <span class="text-primary uppercase tracking-widest text-sm">
+            Insights & Innovation
+          </span>
+
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mt-6 leading-tight">
+            Explore Latest Insights, &<br />Innovations.
+          </h2>
+        </div>
+
+        <!-- Cards -->
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 insight-anim-cards"
+        >
+          <!-- CARD -->
+          <article
+            class="insight-card bg-zinc-900 rounded-2xl overflow-hidden insight-anim-card"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="./src/assets/b1.webp"
+                class="w-full h-64 object-cover transition"
+                alt="blog1"
+              />
+
+              <!-- Date -->
+              <div
+                class="absolute top-4 left-4 bg-black/80 rounded-lg px-4 py-2 text-center"
+              >
+                <div class="text-2xl font-bold">08</div>
+                <div class="text-xs uppercase tracking-widest text-zinc-400">
+                  Nov
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="text-xs bg-primary text-black px-3 py-1 rounded-full"
+                >
+                  Development
+                </span>
+                <span class="text-sm text-zinc-400">By Eade Marren</span>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4">
+                How to Successfully Migrate Your Business to the Cloud
+              </h3>
+
+              <div
+                class="read-more text-sm text-zinc-400 flex items-center gap-2 transition"
+              >
+                Read More <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD -->
+          <article
+            class="insight-card bg-zinc-900 rounded-2xl overflow-hidden insight-anim-card"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="./src/assets/b2.webp"
+                class="w-full h-64 object-cover transition"
+                alt="blog2"
+              />
+
+              <div
+                class="absolute top-4 left-4 bg-black/80 rounded-lg px-4 py-2 text-center"
+              >
+                <div class="text-2xl font-bold">08</div>
+                <div class="text-xs uppercase tracking-widest text-zinc-400">
+                  Nov
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="text-xs bg-primary text-black px-3 py-1 rounded-full"
+                >
+                  Cybersecurity
+                </span>
+                <span class="text-sm text-zinc-400">By Eade Marren</span>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4">
+                Building a Stronger Workforce with IT Training
+              </h3>
+
+              <div
+                class="read-more text-sm text-zinc-400 flex items-center gap-2 transition"
+              >
+                Read More <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD -->
+          <article
+            class="insight-card bg-zinc-900 rounded-2xl overflow-hidden insight-anim-card"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="./src/assets/b3.webp"
+                class="w-full h-64 object-cover transition"
+                alt="blog3"
+              />
+
+              <div
+                class="absolute top-4 left-4 bg-black/80 rounded-lg px-4 py-2 text-center"
+              >
+                <div class="text-2xl font-bold">08</div>
+                <div class="text-xs uppercase tracking-widest text-zinc-400">
+                  Nov
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <span
+                  class="text-xs bg-primary text-black px-3 py-1 rounded-full"
+                >
+                  Automation
+                </span>
+                <span class="text-sm text-zinc-400">By Eade Marren</span>
+              </div>
+
+              <h3 class="text-xl font-semibold mb-4">
+                Optimizing Your IT Budget: Tips and Strategies
+              </h3>
+
+              <div
+                class="read-more text-sm text-zinc-400 flex items-center gap-2 transition"
+              >
+                Read More <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative overflow-hidden">
+      <!-- Background glow / waves (approximation only) -->
+      <div
+        class="absolute inset-0  opacity-80"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 footer-anim-root">
+        <!-- Top Grid -->
+        <div class="grid lg:grid-cols-4 gap-16 mb-20">
+          <!-- Brand -->
+          <div class="footer-anim-item">
+            <div class="flex items-center gap-3 mb-6">
+              <div
+                class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-black font-bold"
+              >
+                S
+              </div>
+              <span class="text-xl font-semibold">StackSolutions</span>
+            </div>
+
+            <p class="text-zinc-400 mb-8 max-w-xs">
+              Every great solution start understand the time into learn about.
+            </p>
+
+            <div class="space-y-4">
+              <a
+                href="./404.html"
+                class="store-btn bg-zinc-700/80 rounded-full px-6 py-4 inline-flex items-center gap-3"
+              >
+                <i class="fa-brands fa-google-play text-xl"></i>
+                <span class="text-sm">Google Play</span>
+              </a>
+              <br />
+
+              <a
+                href="./404.html"
+                class="store-btn bg-zinc-700/80 rounded-full px-6 py-4 inline-flex items-center gap-3"
+              >
+                <i class="fa-brands fa-apple text-xl"></i>
+                <span class="text-sm">App Store</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-anim-item">
+            <h4 class="font-semibold mb-6">Services</h4>
+            <ul class="space-y-3 text-zinc-400 flex flex-col justify-center">
+              <a href="./404.html" class="footer-link transition"
+                >Manage IT Service</a
+              >
+              <a href="./404.html" class="footer-link transition"
+                >Cloud Computing</a
+              >
+              <a href="./404.html" class="footer-link transition"
+                >Cyber Security</a
+              >
+              <a href="./404.html" class="footer-link transition"
+                >Software Develop</a
+              >
+              <a href="./404.html" class="footer-link transition"
+                >Change Manage</a
+              >
+              <a href="./404.html" class="footer-link transition"
+                >IT Consulting</a
+              >
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div class="footer-anim-item">
+            <h4 class="font-semibold mb-6">Resources</h4>
+            <ul class="space-y-3 text-zinc-400 flex flex-col justify-center">
+              <a href="./404.html" class="footer-link transition">Contact Us</a>
+              <a href="./404.html" class="footer-link transition"
+                >Privacy Policy</a
+              >
+              <a href="./404.html" class="footer-link transition"
+                >Recognitions</a
+              >
+              <a
+                href="./404.html"
+                class="footer-link transition flex items-center gap-2"
+              >
+                Careers
+                <span
+                  class="text-xs bg-primary text-black px-2 py-0.5 rounded-full"
+                  >NEW</span
+                >
+              </a>
+              <a href="./404.html" class="footer-link transition">News</a>
+              <a href="./404.html" class="footer-link transition">Feedback</a>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-anim-item">
+            <h4 class="font-semibold mb-6">Contact Info</h4>
+
+            <p class="text-zinc-400 mb-4">
+              993 Renner Burg, West Rond,<br />
+              MT 94251-030
+            </p>
+
+            <p class="mb-2"><strong>P:</strong> +1 (009) 544-7818</p>
+            <p class="mb-4"><strong>E:</strong> support@stacksolutions.com</p>
+
+            <div class="flex items-center gap-2 text-zinc-400">
+              <i class="fa-regular fa-clock text-primary"></i>
+              <span>Mon–Fri 09am–06pm</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div
+          class="border-t border-zinc-700/70 pt-6 flex flex-wrap justify-center md:justify-between items-center text-zinc-200 text-sm text-center footer-anim-item py-6"
+        >
+          <p>StackSolutions © 2026. All right reserved.</p>
+          <p>Privacy & Policy · Terms & Condition</p>
+        </div>
+      </div>
+    </footer>
+
+    <!----------------------------------------------------------------
+                                     SCRIPT 
+    ------------------------------------------------------------------>
+
+    <!-- SCROLL REVEAL GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      ScrollTrigger.normalizeScroll(true);
+
+      const splitTypes = document.querySelectorAll(".reveal-type");
+
+      splitTypes.forEach((el) => {
+        const bg = el.dataset.bgColor || "#333";
+        const fg = el.dataset.fgColor || "#fff";
+
+        const text = new SplitType(el, { types: "words" });
+
+        gsap.fromTo(
+          text.words,
+          {
+            color: bg,
+          },
+          {
+            color: fg,
+            ease: "none",
+            stagger: 0.06,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 75%",
+              end: "top 35%",
+              scrub: 0.6, // <-- THIS is smoothness
+              markers: false,
+            },
+          },
+        );
+      });
+    </script>
+
+    <!-- NAVBAR GSAP -->
+    <script>
+      const openBtn = document.querySelector(".mobile-open");
+      const closeBtn = document.querySelector(".mobile-close");
+      const menu = document.querySelector(".mobile-menu");
+      const links = document.querySelectorAll(".mobile-link");
+
+      let menuOpen = false;
+
+      // initial states
+      gsap.set(menu, { autoAlpha: 0, y: -40 });
+      gsap.set(links, { opacity: 0, y: -30 });
+
+      const openMenu = () => {
+        gsap.to(menu, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power3.out",
+        });
+
+        gsap.to(links, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.12,
+          ease: "power3.out",
+          delay: 0.15,
+        });
+
+        menuOpen = true;
+      };
+
+      const closeMenu = () => {
+        gsap.to(links, {
+          opacity: 0,
+          y: -30,
+          duration: 0.35,
+          stagger: 0.08,
+          ease: "power2.in",
+        });
+
+        gsap.to(menu, {
+          autoAlpha: 0,
+          y: -100,
+          duration: 0.8,
+          ease: "power2.in",
+          delay: 0.2,
+        });
+
+        menuOpen = false;
+      };
+
+      openBtn.addEventListener("click", () => {
+        menuOpen ? closeMenu() : openMenu();
+      });
+
+      closeBtn.addEventListener("click", closeMenu);
+    </script>
+
+    <!-- HOME GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // WORD SPLIT (no SplitText plugin)
+      const title = document.querySelector(".hero-title");
+      const words = title.innerText.split(" ");
+      title.innerHTML = words
+        .map(
+          (word) =>
+            `<span class="inline-block overflow-hidden"><span class="word inline-block">${word}&nbsp;</span></span>`,
+        )
+        .join("");
+
+      gsap.from(".word", {
+        y: 80,
+        opacity: 0,
+        duration: 1.4,
+        ease: "power3.out",
+        stagger: 0.08,
+      });
+
+      gsap.from(".badge-1", {
+        y: -80,
+        opacity: 0,
+        duration: 1.3,
+        ease: "power3.out",
+      });
+
+      // Image parallax
+      gsap.to(".hero-image img", {
+        scale: 1.2,
+        duration: 0.8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-image",
+          start: "top bottom",
+          end: "bottom top",
+        },
+      });
+
+      // cta
+      gsap.from(".get-1", {
+        y: 80,
+        opacity: 0,
+        duration: 1.5,
+        stagger: 0.25,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".cta-but",
+        },
+      });
+
+      // cont
+      gsap.from(".cont-1", {
+        y: 80,
+        opacity: 0,
+        duration: 1.7,
+        stagger: 0.25,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".cont",
+          start: "top 95%",
+        },
+      });
+
+      // rating-1
+      gsap.from(".rating-1", {
+        y: 80,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".rating",
+          start: "top 80%",
+        },
+      });
+    </script>
+
+    <!-- WHY GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(".why-card", {
+        opacity: 0,
+        y: 80,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: ".why-grid",
+          start: "top 90%",
+        },
+      });
+    </script>
+
+    <!-- ABOUT GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // IMAGE PARALLAX
+      gsap.to(".about-image-wrap img", {
+        y: -40,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".about-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      // LEFT IMAGE FADE
+      gsap.from(".about-left", {
+        opacity: 0,
+        x: -80,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".about-section",
+          start: "top 70%",
+        },
+      });
+
+      // RIGHT CONTENT STAGGER
+      gsap.from(".about-right > *", {
+        opacity: 0,
+        y: 40,
+        stagger: 0.15,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".about-section",
+          start: "top 70%",
+        },
+      });
+    </script>
+
+    <!-- SERVICES GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(".serv-header", {
+        opacity: 0,
+        y: 80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".serv-header",
+          start: "top 80%",
+        },
+      });
+
+      gsap.from(".serv-card", {
+        opacity: 0,
+        y: 60,
+        duration: 0.9,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".serv-header",
+          start: "top 80%",
+        },
+      });
+    </script>
+
+    <!-- TEAMS GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* Header */
+      gsap.from(".team-anim-header", {
+        opacity: 0,
+        y: 80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".team-anim-header",
+          start: "top 80%",
+        },
+      });
+
+      /* Cards */
+      gsap.from(".team-anim-card", {
+        opacity: 0,
+        y: 60,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".team-anim-cards",
+          start: "top 80%",
+        },
+      });
+    </script>
+
+    <!-- INSIGHTS GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* Header */
+      gsap.from(".insight-anim-header", {
+        opacity: 0,
+        y: 80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".insight-anim-header",
+          start: "top 80%",
+        },
+      });
+
+      /* Cards */
+      gsap.from(".insight-anim-card", {
+        opacity: 0,
+        y: 60,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".insight-anim-cards",
+          start: "top 80%",
+        },
+      });
+    </script>
+
+    <!-- STEPS GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* Header animation */
+      gsap.from(".process-anim-header", {
+        opacity: 0,
+        y: 80,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".process-anim-header",
+          start: "top 80%",
+        },
+      });
+
+      /* Cards stagger */
+      gsap.from(".process-anim-card", {
+        opacity: 0,
+        y: 60,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".process-anim-cards",
+          start: "top 80%",
+        },
+      });
+    </script>
+
+    <!-- CONTACT FORM VALIDATION & GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* Entrance animations */
+      gsap.from(".contact-anim-left", {
+        opacity: 0,
+        x: -80,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".contact-anim-root",
+          start: "top 75%",
+        },
+      });
+
+      gsap.from(".contact-anim-right", {
+        opacity: 0,
+        x: 80,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".contact-anim-root",
+          start: "top 75%",
+        },
+      });
+
+      /* Form validation */
+      const form = document.getElementById("contactForm");
+      const emailField = document.getElementById("emailField");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = emailField.value.trim();
+
+        // Gmail-only validation
+        if (!email.endsWith("@gmail.com")) {
+          emailField.setCustomValidity(
+            "Only @gmail.com email addresses are allowed.",
+          );
+          emailField.title = "Only @gmail.com email addresses are allowed.";
+          emailField.reportValidity();
+          return;
+        }
+
+        // Clear validation state
+        emailField.setCustomValidity("");
+        emailField.title = "";
+
+        // Reset form
+        form.reset();
+
+        // Redirect after submit
+        window.location.href = "./404.html";
+      });
+    </script>
+
+    <!-- FOOTER GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(".footer-anim-item", {
+        opacity: 0,
+        y: 60,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".footer-anim-root",
+          start: "top 80%",
+        },
+      });
+    </script>
+
+    <!-- LENIS JS -->
+    <script>
+      // Initialize a new Lenis instance for smooth scrolling
+      const lenis = new Lenis({
+        duration: 2, // Smoothness (1–1.5 recommended)
+        // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Natural ease
+        easing: (t) => 1 - Math.pow(1 - t, 4),
+        smoothWheel: true, // Mouse wheel smoothing
+        smoothTouch: false, // Disable on mobile (better UX)
+      });
+
+      // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+      lenis.on("scroll", ScrollTrigger.update);
+
+      // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+      // This ensures Lenis's smooth scroll animation updates on each GSAP tick
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+      });
+
+      // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+      gsap.ticker.lagSmoothing(0);
+    </script>
+  </body>
+</html>
