@@ -161,15 +161,54 @@
       }
     </style>
 
+    <!-- MARQUEE CSS -->
+    <style>
+      .marquee-track:hover {
+        cursor: pointer;
+      }
+    </style>
+
     <!-- VIDEO CSS -->
     <style>
       .play-btn:hover {
-        transform: scale(1.08);
-        box-shadow: 0 0 0 10px rgba(199, 255, 26, 0.15);
+        transform: scale(0.9);
+        cursor: pointer;
+      }
+
+      @keyframes pulseShadow {
+        0% {
+          box-shadow: 0 0 0 0 rgba(199, 255, 26, 0.35);
+        }
+
+        50% {
+          box-shadow: 0 0 0 18px rgba(199, 255, 26, 0.15);
+        }
+
+        100% {
+          box-shadow: 0 0 0 0 rgba(199, 255, 26, 0.35);
+        }
+      }
+
+      .play-btn {
+        transition: all 0.6s ease-in-out;
+        animation: pulseShadow 2.2s ease-in-out infinite;
+        will-change: box-shadow;
       }
 
       .close-btn:hover {
         transform: scale(1.1);
+        cursor: pointer;
+      }
+    </style>
+
+    <!-- STATS CSS -->
+    <style>
+      .stat-card:hover {
+        background-color: #0b0b0b;
+      }
+
+      .stat-icon:hover {
+        transform: scale(1.15);
       }
     </style>
 
@@ -219,15 +258,44 @@
 
     <!-- STEPS CSS -->
     <style>
-      .step-circle:hover {
-        transform: scale(1.08);
+      .process-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+      }
+
+      .explore-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 35px rgba(199, 255, 26, 0.35);
+      }
+    </style>
+
+    <!-- TESTIMONIALS CSS -->
+    <style>
+      .testimonial-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 22px 45px rgba(0, 0, 0, 0.6);
+      }
+    </style>
+
+    <!-- FAQ CSS -->
+    <style>
+      .faq-item:hover {
+        background-color: #0b0b0b;
+      }
+
+      .faq-toggle:hover {
+        transform: scale(1.1);
+      }
+
+      .contact-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 35px rgba(199, 255, 26, 0.35);
       }
     </style>
 
     <!-- MISS OUT CSS -->
     <style>
       .subscribe-btn:hover {
-        transform: translateY(-2px);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
       }
 
@@ -247,6 +315,34 @@
 
       .store-btn:hover {
         box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+      }
+    </style>
+
+    <!-- SCROLL TO TOP CSS -->
+    <style>
+      .scrolltop-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(199, 255, 26, 0.45);
+      }
+
+      @keyframes scrollShadow {
+        0% {
+          box-shadow: 0 0 0 0 rgba(199, 255, 26, 0.35);
+        }
+
+        50% {
+          box-shadow: 0 0 0 18px rgba(199, 255, 26, 0.15);
+        }
+
+        100% {
+          box-shadow: 0 0 0 0 rgba(199, 255, 26, 0.35);
+        }
+      }
+
+      .scrolltop-btn {
+        transition: all 0.6s ease-in-out;
+        animation: scrollShadow 2.2s ease-in-out infinite;
+        will-change: box-shadow;
       }
     </style>
   </head>
@@ -344,9 +440,9 @@
     </header>
 
     <!-- HOME -->
-    <section class="relative overflow-hidden">
+    <main class="relative overflow-hidden">
       <div
-        class="max-w-7xl mx-auto px-6 lg:px-12 py-6 grid xl:grid-cols-2 gap-16 items-center"
+        class="max-w-7xl mx-auto px-6 lg:px-8 py-6 grid xllg:grid-cols-2 gap-16 items-center"
       >
         <!-- LEFT -->
         <div class="space-y-8">
@@ -466,11 +562,11 @@
           </div>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- WHY -->
     <section class="why-section py-24 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <!-- HEADER -->
         <div
           class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-16"
@@ -490,7 +586,7 @@
           </div>
 
           <div class="flex flex-wrap items-center gap-10">
-            <p class="text-white/70 max-w-xs">
+            <p class="text-white/80 max-w-xs">
               Our services are customized to meet your unique.
             </p>
 
@@ -539,7 +635,7 @@
               </div>
 
               <h3 class="text-xl font-semibold mb-4">Proven Track Record</h3>
-              <p class="text-white/70 leading-relaxed">
+              <p class="text-white/90 leading-relaxed">
                 With a portfolio of successful projects and satisfied clients,
                 we have a reputation.
               </p>
@@ -558,7 +654,7 @@
               </div>
 
               <h3 class="text-xl font-semibold mb-4">Tailored Solutions</h3>
-              <p class="text-white/70 leading-relaxed">
+              <p class="text-white/90 leading-relaxed">
                 Our services are customized to meet your unique business needs,
                 ensuring solution.
               </p>
@@ -577,7 +673,7 @@
               </div>
 
               <h3 class="text-xl font-semibold mb-4">Future Technologies</h3>
-              <p class="text-white/70 leading-relaxed">
+              <p class="text-white/90 leading-relaxed">
                 Stay ahead of the competition with AI, cloud computing, and
                 automation solutions.
               </p>
@@ -596,7 +692,7 @@
               </div>
 
               <h3 class="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p class="text-white/70 leading-relaxed">
+              <p class="text-white/90 leading-relaxed">
                 With a portfolio of successful projects and satisfied clients,
                 we have a reputation.
               </p>
@@ -611,7 +707,7 @@
       class="about-section relative bg-black text-white py-24 overflow-hidden"
     >
       <div
-        class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center"
+        class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center"
       >
         <!-- LEFT IMAGE BLOCK -->
         <div class="about-left relative h-full">
@@ -646,7 +742,7 @@
             Delivering Solution That Drive Our Innovation & Fast Success.
           </h2>
 
-          <p class="text-gray-400 max-w-lg mb-8">
+          <p class="text-gray-200 max-w-lg mb-8">
             We are a team of passionate tech experts delivering innovative IT
             solutions tailored to help businesses grow, adapt, and thrive in a
             digital. Stay ahead of the competition.
@@ -657,11 +753,11 @@
             <div class="flex gap-10">
               <div>
                 <h3 class="text-4xl font-bold text-primary">3K+</h3>
-                <p class="text-gray-400 text-sm mt-1">Successful Projects.</p>
+                <p class="text-gray-200 text-sm mt-1">Successful Projects.</p>
               </div>
               <div>
                 <h3 class="text-4xl font-bold text-primary">98+</h3>
-                <p class="text-gray-400 text-sm mt-1">IT Professionals.</p>
+                <p class="text-gray-200 text-sm mt-1">IT Professionals.</p>
               </div>
             </div>
 
@@ -733,7 +829,7 @@
 
     <!-- SERVICES -->
     <section class="py-24 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <!-- Header -->
         <div class="grid lg:grid-cols-3 gap-16 items-center mb-20 serv-header">
           <div class="h-full">
@@ -766,11 +862,11 @@
           <div class="serv-card h-full">
             <div class="service-card bg-secondary/15 rounded-2xl p-8">
               <h3 class="text-xl font-semibold mb-2">Managed IT Services</h3>
-              <p class="text-zinc-400 text-sm mb-6">
+              <p class="text-zinc-200 text-sm mb-6">
                 Comprehensive IT management, including monitoring, maintenance.
               </p>
 
-              <ul class="space-y-2 text-sm text-zinc-300">
+              <ul class="space-y-2 text-sm text-zinc-100">
                 <li>
                   <i class="fa-solid fa-check text-primary mr-2"></i>24/7 system
                   monitoring
@@ -807,11 +903,11 @@
               <h3 class="text-xl font-semibold mb-2">
                 IT Consulting & Strategy
               </h3>
-              <p class="text-zinc-400 text-sm mb-6">
+              <p class="text-zinc-200 text-sm mb-6">
                 Comprehensive IT management, including monitoring, maintenance.
               </p>
 
-              <ul class="space-y-2 text-sm text-zinc-300">
+              <ul class="space-y-2 text-sm text-zinc-100">
                 <li>
                   <i class="fa-solid fa-check text-primary mr-2"></i>24/7 system
                   monitoring
@@ -849,11 +945,11 @@
           <div class="serv-card h-full">
             <div class="service-card bg-secondary/50 rounded-2xl p-8">
               <h3 class="text-xl font-semibold mb-2">Network Infrastructure</h3>
-              <p class="text-zinc-400 text-sm mb-6">
+              <p class="text-zinc-200 text-sm mb-6">
                 Comprehensive IT management, including monitoring, maintenance.
               </p>
 
-              <ul class="space-y-2 text-sm text-zinc-300">
+              <ul class="space-y-2 text-sm text-zinc-100">
                 <li>
                   <i class="fa-solid fa-check text-primary mr-2"></i>24/7 system
                   monitoring
@@ -888,10 +984,10 @@
           <div class="serv-card h-full">
             <div class="service-card bg-secondary/50 rounded-2xl p-8">
               <h3 class="text-xl font-semibold mb-2">Cloud Computing</h3>
-              <p class="text-zinc-400 text-sm mb-6">
+              <p class="text-zinc-200 text-sm mb-6">
                 Scalable cloud-based services including migration and security.
               </p>
-              <ul class="space-y-2 text-sm text-zinc-300">
+              <ul class="space-y-2 text-sm text-zinc-100">
                 <li>
                   <i class="fa-solid fa-check text-primary mr-2"></i>Scalable
                   storage
@@ -926,10 +1022,10 @@
               <h3 class="text-xl font-semibold mb-2">
                 Cybersecurity Solutions
               </h3>
-              <p class="text-zinc-400 text-sm mb-6">
+              <p class="text-zinc-200 text-sm mb-6">
                 Advanced security measures including threat detection.
               </p>
-              <ul class="space-y-2 text-sm text-zinc-300">
+              <ul class="space-y-2 text-sm text-zinc-100">
                 <li>
                   <i class="fa-solid fa-check text-primary mr-2"></i>Firewall
                   protection
@@ -962,12 +1058,50 @@
       </div>
     </section>
 
+    <!-- MARQUEE LINE -->
+    <section class="py-20 overflow-hidden">
+      <div
+        class="max-w-7xl px-6 lg:px-8 mx-auto overflow-hidden bg-primary text-black text-xl py-12 rounded-2xl marquee-root"
+      >
+        <div class="flex items-center gap-10 whitespace-nowrap marquee-track">
+          <!-- DUPLICATED CONTENT FOR SEAMLESS LOOP -->
+          <div class="flex items-center gap-10 marquee-content">
+            <span>Business and impact</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Passion and progress</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Founders and vision</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Growth and impact</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Team and values</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Innovation mindset</span>
+          </div>
+
+          <div class="flex items-center gap-10 marquee-content">
+            <span>Business and impact</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Passion and progress</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Founders and vision</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Growth and impact</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Team and values</span>
+            <i class="fa-solid fa-asterisk"></i>
+            <span>Innovation mindset</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- VIDEO THUMBNAIL -->
-    <section class="py-28">
-      <div class="max-w-6xl mx-auto px-6 relative video-thumb-root">
+    <section class="py-16 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 relative video-thumb-root">
         <img
           src="./src/assets/b1.webp"
-          class="rounded-3xl w-full object-cover"
+          class="rounded-3xl w-full h-96 object-cover brightness-75"
           alt="vid"
         />
 
@@ -982,27 +1116,107 @@
 
     <!-- MODAL -->
     <div
-      class="fixed inset-0 z-50 video-modal-root flex items-center justify-center"
+      class="max-w-7xl px-3 mx-auto fixed inset-0 z-50 video-modal-root flex items-center justify-center"
     >
-      <div class="absolute inset-0 bg-black/80 video-overlay"></div>
+      <div class="absolute inset-0 bg-black/95 video-overlay">
+        <button
+          class="close-btn absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition video-close-btn"
+          aria-label="Close video"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
 
       <div class="relative max-w-4xl w-full px-6 video-modal-box">
         <div class="relative bg-black rounded-2xl overflow-hidden aspect-video">
-          <button
-            class="close-btn absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition video-close-btn"
-            aria-label="Close video"
-          >
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-
           <div class="w-full h-full video-frame-slot"></div>
         </div>
       </div>
     </div>
 
+    <!-- STATS -->
+    <section class="overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div
+          class="grid md:grid-cols-4 rounded-2xl overflow-hidden border border-zinc-800 stats-anim-root"
+        >
+          <!-- CARD -->
+          <div
+            class="stat-card p-10 border-r border-zinc-800 text-center stats-anim-card"
+          >
+            <div class="stat-icon text-primary text-3xl mb-6 transition">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <div
+              class="stat-number text-5xl font-bold mb-3"
+              data-value="10000"
+              data-suffix="+"
+            >
+              0
+            </div>
+
+            <p class="text-zinc-400">Engaged Customers</p>
+          </div>
+
+          <div
+            class="stat-card p-10 border-r border-zinc-800 text-center stats-anim-card"
+          >
+            <div class="stat-icon text-primary text-3xl mb-6 transition">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+
+            <div
+              class="stat-number text-5xl font-bold mb-3"
+              data-value="99"
+              data-suffix="%"
+            >
+              0
+            </div>
+
+            <p class="text-zinc-400">Customer Success Stories</p>
+          </div>
+
+          <div
+            class="stat-card p-10 border-r border-zinc-800 text-center stats-anim-card"
+          >
+            <div class="stat-icon text-primary text-3xl mb-6 transition">
+              <i class="fa-solid fa-users-gear"></i>
+            </div>
+
+            <div
+              class="stat-number text-5xl font-bold mb-3"
+              data-value="80"
+              data-suffix="+"
+            >
+              0
+            </div>
+
+            <p class="text-zinc-400">Team of Professionals</p>
+          </div>
+
+          <div class="stat-card p-10 text-center stats-anim-card">
+            <div class="stat-icon text-primary text-3xl mb-6 transition">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+
+            <div
+              class="stat-number text-5xl font-bold mb-3"
+              data-value="10"
+              data-suffix="x"
+            >
+              0
+            </div>
+
+            <p class="text-zinc-400">More Faster Growth</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- TEAMS -->
     <section class="py-24 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <!-- Header -->
         <div
           class="grid lg:grid-cols-2 gap-20 items-start mb-20 team-anim-header"
@@ -1013,7 +1227,7 @@
             </span>
 
             <h2
-              class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6"
+              class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6 reveal-type"
             >
               Creative Minds Behind<br />
               our Team.
@@ -1023,7 +1237,7 @@
           <div
             class="grid md:grid-cols-2 items-end justify-between gap-5 h-full"
           >
-            <p class="text-zinc-400 max-w-sm">
+            <p class="text-zinc-200 max-w-sm">
               Our teams are customized to meet your unique ideas.
             </p>
 
@@ -1041,24 +1255,55 @@
           </div>
         </div>
 
-        <!-- Cards -->
+        <!-- CARDS -->
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 team-anim-cards">
           <!-- CARD -->
           <div
-            class="team-card bg-zinc-900 rounded-2xl overflow-hidden team-anim-card"
+            class="team-card bg-zinc-900 rounded-2xl overflow-hidden group team-anim-card"
           >
-            <div class="relative overflow-hidden">
+            <div class="relative my-auto overflow-hidden">
               <img
                 src="./src/assets/t1.webp"
                 class="w-full h-80 object-cover transition"
                 alt="team1"
               />
 
-              <button
-                class="share-btn absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition"
+              <!-- PROFILE ICONS -->
+              <div
+                class="absolute bottom-0 bg-primary/80 w-full h-16 my-auto rounded-t-2xl transform translate-y-full group-hover:translate-y-0 transition duration-500 ease-in-out"
               >
-                <i class="fa-solid fa-share-nodes"></i>
-              </button>
+                <div
+                  class="flex items-center justify-center gap-6 w-full h-full"
+                >
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div class="p-6">
@@ -1068,7 +1313,7 @@
           </div>
 
           <div
-            class="team-card bg-zinc-900 rounded-2xl overflow-hidden team-anim-card"
+            class="team-card bg-zinc-900 rounded-2xl overflow-hidden group team-anim-card"
           >
             <div class="relative overflow-hidden">
               <img
@@ -1077,11 +1322,42 @@
                 alt="team2"
               />
 
-              <button
-                class="share-btn absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition"
+              <!-- PROFILE ICONS -->
+              <div
+                class="absolute bottom-0 bg-primary/80 w-full h-16 my-auto rounded-t-2xl transform translate-y-full group-hover:translate-y-0 transition duration-500 ease-in-out"
               >
-                <i class="fa-solid fa-share-nodes"></i>
-              </button>
+                <div
+                  class="flex items-center justify-center gap-6 w-full h-full"
+                >
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div class="p-6">
@@ -1091,7 +1367,7 @@
           </div>
 
           <div
-            class="team-card bg-zinc-900 rounded-2xl overflow-hidden team-anim-card"
+            class="team-card bg-zinc-900 rounded-2xl overflow-hidden group team-anim-card"
           >
             <div class="relative overflow-hidden">
               <img
@@ -1099,12 +1375,42 @@
                 class="w-full h-80 object-cover transition"
                 alt="team3"
               />
-
-              <button
-                class="share-btn absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition"
+              <!-- PROFILE ICONS -->
+              <div
+                class="absolute bottom-0 bg-primary/80 w-full h-16 my-auto rounded-t-2xl transform translate-y-full group-hover:translate-y-0 transition duration-500 ease-in-out"
               >
-                <i class="fa-solid fa-share-nodes"></i>
-              </button>
+                <div
+                  class="flex items-center justify-center gap-6 w-full h-full"
+                >
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div class="p-6">
@@ -1114,7 +1420,7 @@
           </div>
 
           <div
-            class="team-card bg-zinc-900 rounded-2xl overflow-hidden team-anim-card"
+            class="team-card bg-zinc-900 rounded-2xl overflow-hidden group team-anim-card"
           >
             <div class="relative overflow-hidden">
               <img
@@ -1122,12 +1428,42 @@
                 class="w-full h-80 object-cover transition"
                 alt="team4"
               />
-
-              <button
-                class="share-btn absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center transition"
+              <!-- PROFILE ICONS -->
+              <div
+                class="absolute bottom-0 bg-primary/80 w-full h-16 my-auto rounded-t-2xl transform translate-y-full group-hover:translate-y-0 transition duration-500 ease-in-out"
               >
-                <i class="fa-solid fa-share-nodes"></i>
-              </button>
+                <div
+                  class="flex items-center justify-center gap-6 w-full h-full"
+                >
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+
+                  <a
+                    href="./404.html"
+                    class="social-icon w-9 h-9 rounded-full bg-black text-white flex items-center justify-center transition"
+                  >
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div class="p-6">
@@ -1140,10 +1476,20 @@
     </section>
 
     <!-- STEPS -->
-    <section class="py-24 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
-        <!-- Header -->
-        <div class="text-center mb-24 process-anim-header">
+    <section class="py-12 relative overflow-hidden">
+      <!-- BG EFFECT -->
+      <img
+        class="w-full h-full object-cover absolute inset-0 brightness-50"
+        src="./src/assets/steps.webp"
+        alt="bg"
+      />
+
+      <!-- CONTENT -->
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-20 items-start process-root"
+      >
+        <!-- LEFT CONTENT -->
+        <div class="process-left">
           <span class="text-primary uppercase tracking-widest text-sm">
             Our Working Process
           </span>
@@ -1151,30 +1497,51 @@
           <h2
             class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6"
           >
-            Transform Your Business<br />
-            in 3<br />
-            Simple Steps.
+            Turning Your Business<br />
+            Goals Into Seamless<br />
+            Digital <span class="text-primary">IT Solution.</span>
           </h2>
+
+          <p class="text-zinc-400 mt-6 max-w-md">
+            Custom software solutions tailored to your business needs
+            development.
+          </p>
+
+          <a
+            href="./404.html"
+            class="mt-8 inline-flex items-center gap-4 bg-secondary group hover-btn rounded-full px-6 py-3 w-fit"
+          >
+            <span>More Members</span>
+            <span
+              class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full transform -rotate-45 group-hover:rotate-0 transition duration-500 ease-in-out"
+            >
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
         </div>
 
-        <!-- Steps -->
-        <div class="grid md:grid-cols-3 gap-12 items-start process-anim-cards">
+        <!-- RIGHT TIMELINE -->
+        <div class="relative process-right">
+          <!-- VERTICAL LINE -->
+          <div
+            class="absolute left-6 top-0 bottom-0 w-px bg-zinc-800 process-line"
+          ></div>
+
           <!-- STEP 01 -->
-          <div class="relative process-anim-card">
-            <div
-              class="step-circle absolute -top-8 left-8 w-16 h-16 rounded-full bg-primary text-black flex items-center justify-center text-xl font-bold"
-            >
-              01.
+          <div class="flex gap-8 mb-10 process-step">
+            <div class="relative">
+              <div
+                class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-bold"
+              >
+                01.
+              </div>
             </div>
 
             <div
-              class="process-card bg-secondary/50 rounded-2xl p-8 pt-16 transition"
+              class="process-card bg-zinc-900 rounded-2xl p-6 transition max-w-md"
             >
-              <h3 class="text-xl font-semibold mb-4">
-                Deep Discovery & Planning
-              </h3>
-
-              <p class="text-zinc-400 text-sm leading-relaxed">
+              <h4 class="font-semibold mb-2">Deep Discovery & Planning</h4>
+              <p class="text-zinc-200 text-sm leading-relaxed">
                 Every great solution starts understanding. We take the time to
                 learn about your business, challenges, and goals.
               </p>
@@ -1182,41 +1549,41 @@
           </div>
 
           <!-- STEP 02 -->
-          <div class="relative process-anim-card">
-            <div
-              class="step-circle absolute -top-8 left-8 w-16 h-16 rounded-full bg-primary text-black flex items-center justify-center text-xl font-bold"
-            >
-              02.
+          <div class="flex gap-8 mb-10 process-step">
+            <div class="relative">
+              <div
+                class="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center font-bold"
+              >
+                02.
+              </div>
             </div>
 
             <div
-              class="process-card bg-secondary/50 rounded-2xl p-8 pt-16 transition"
+              class="process-card bg-zinc-900 rounded-2xl p-6 transition max-w-md"
             >
-              <h3 class="text-xl font-semibold mb-4">
-                Development & Implement
-              </h3>
-
-              <p class="text-zinc-400 text-sm leading-relaxed">
+              <h4 class="font-semibold mb-2">Development & Implement</h4>
+              <p class="text-zinc-200 text-sm leading-relaxed">
                 Every great solution starts understanding. We take the time to
                 learn about your business, challenges, and goals.
               </p>
             </div>
           </div>
 
-          <!-- STEP 03 -->
-          <div class="relative process-anim-card">
-            <div
-              class="step-circle absolute -top-8 left-8 w-16 h-16 rounded-full bg-primary text-black flex items-center justify-center text-xl font-bold"
-            >
-              03.
+          <!-- STEP 03 (ACTIVE) -->
+          <div class="flex gap-8 process-step">
+            <div class="relative">
+              <div
+                class="w-12 h-12 rounded-full bg-primary text-black flex items-center justify-center font-bold"
+              >
+                03.
+              </div>
             </div>
 
             <div
-              class="process-card bg-secondary/50 rounded-2xl p-8 pt-16 transition"
+              class="process-card bg-zinc-900 rounded-2xl p-6 transition max-w-md"
             >
-              <h3 class="text-xl font-semibold mb-4">Optimization & Support</h3>
-
-              <p class="text-zinc-400 text-sm leading-relaxed">
+              <h4 class="font-semibold mb-2">Optimization & Support</h4>
+              <p class="text-zinc-200 text-sm leading-relaxed">
                 Every great solution starts understanding. We take the time to
                 learn about your business, challenges, and goals.
               </p>
@@ -1226,10 +1593,146 @@
       </div>
     </section>
 
+    <!-- TESTIMONIALS -->
+    <section class="py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <!-- HEADER -->
+        <div class="text-center mb-20 testimonial-anim-header">
+          <span class="text-zinc-400 uppercase tracking-widest text-sm">
+            Success Stories
+          </span>
+
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mt-6">
+            Building Success with<br />
+            Client <span class="text-primary">Feedback.</span>
+          </h2>
+        </div>
+
+        <!-- CARDS -->
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 testimonial-anim-cards"
+        >
+          <!-- CARD 1-->
+          <div
+            class="testimonial-card bg-zinc-900 rounded-2xl p-8 testimonial-anim-card"
+          >
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center">
+                <div
+                  class="w-14 h-14 rounded-full bg-primary text-black flex items-center justify-center text-xl border-4 z-10"
+                >
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+
+                <img
+                  src="./src/assets/tes1.webp"
+                  class="w-12 h-12 rounded-full object-cover transform -translate-x-4 z-5"
+                  alt="prof1"
+                />
+              </div>
+
+              <div class="flex gap-1 text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+
+            <p class="text-zinc-200 leading-relaxed mb-6">
+              Partnering with Tekmino has been an absolute game-changer for our
+              company. Their team delivered a tailored IT solution that met our
+              unique business needs, and their proactive approach to problem.
+            </p>
+
+            <h4 class="font-semibold">Devon Lane</h4>
+            <p class="text-zinc-500 text-sm">Co. Founder</p>
+          </div>
+
+          <!-- CARD 2 -->
+          <div
+            class="testimonial-card bg-zinc-900 rounded-2xl p-8 testimonial-anim-card"
+          >
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center">
+                <div
+                  class="w-14 h-14 rounded-full bg-primary text-black flex items-center justify-center text-xl border-4 z-10"
+                >
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+
+                <img
+                  src="./src/assets/tes2.webp"
+                  class="w-12 h-12 rounded-full object-cover transform -translate-x-4 z-5"
+                  alt="prof2"
+                />
+              </div>
+
+              <div class="flex gap-1 text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+
+            <p class="text-zinc-200 leading-relaxed mb-6">
+              Tekmino truly exceeded our expectations. From the initial
+              consultation to the final implementation, their team provided
+              excellent service and unwavering support.
+            </p>
+
+            <h4 class="font-semibold">Cameron Williamson</h4>
+            <p class="text-zinc-500 text-sm">Co. Founder</p>
+          </div>
+
+          <!-- CARD 3 -->
+          <div
+            class="testimonial-card bg-zinc-900 rounded-2xl p-8 testimonial-anim-card"
+          >
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center">
+                <div
+                  class="w-14 h-14 rounded-full bg-primary text-black flex items-center justify-center text-xl border-4 z-10"
+                >
+                  <i class="fa-solid fa-quote-left"></i>
+                </div>
+
+                <img
+                  src="./src/assets/tes3.webp"
+                  class="w-12 h-12 rounded-full object-cover transform -translate-x-4 z-5"
+                  alt="prof3"
+                />
+              </div>
+
+              <div class="flex gap-1 text-yellow-400">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+
+            <p class="text-zinc-200 leading-relaxed mb-6">
+              When we approached Tekmino for help with our technology
+              integration, we were looking for a partner who could deliver
+              tangible results. They did exactly that.
+            </p>
+
+            <h4 class="font-semibold">Eleanor Pena</h4>
+            <p class="text-zinc-500 text-sm">Co. Founder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
-    <section class="py-24 relative overflow-hidden">
+    <section class="py-12 md:py-16 relative overflow-hidden">
       <div
-        class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-start contact-anim-root"
+        class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-20 items-start contact-anim-root"
       >
         <!-- LEFT -->
         <div class="contact-anim-left">
@@ -1246,18 +1749,23 @@
             Experts.
           </h2>
 
-          <button
-            class="contact-btn inline-flex items-center gap-3 bg-primary text-black px-8 py-4 rounded-full font-medium transition"
+          <a
+            href="./404.html"
+            class="inline-flex items-center gap-4 bg-secondary group hover-btn rounded-full px-6 py-3 w-fit"
           >
-            Contact Us Now
-            <i class="fa-solid fa-arrow-up-right"></i>
-          </button>
+            <span>CONTACT US NOW</span>
+            <span
+              class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full transform -rotate-45 group-hover:rotate-0 transition duration-500 ease-in-out"
+            >
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
 
-          <div class="grid md:grid-cols-3 gap-10 mt-20 text-sm text-zinc-400">
+          <div class="grid md:grid-cols-3 gap-10 mt-20 text-sm text-zinc-200">
             <div>
               <h4 class="text-white mb-2">Contact Info:</h4>
-              <p>+1 (009) 544-7818</p>
-              <p>support@tekmino.com</p>
+              <p>+1 (123) 456-7891</p>
+              <p>support@stacks.com</p>
             </div>
 
             <div>
@@ -1269,7 +1777,7 @@
             <div>
               <h4 class="text-white mb-2">Contact Info:</h4>
               <p>Mon – Fri <span class="text-primary">(Open)</span></p>
-              <p>09:00am – 06:00pm</p>
+              <p>09:30am – 06:30pm</p>
             </div>
           </div>
         </div>
@@ -1277,7 +1785,7 @@
         <!-- RIGHT FORM -->
         <form
           id="contactForm"
-          class="bg-zinc-950 rounded-3xl p-10 contact-anim-right"
+          class="bg-zinc-950 rounded-3xl px-4 py-6 md:p-10 contact-anim-right"
           novalidate
         >
           <h3 class="text-3xl font-semibold mb-10">
@@ -1286,40 +1794,40 @@
 
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label class="text-sm text-zinc-400">Full Name *</label>
+              <label class="text-sm text-zinc-200">Full Name *</label>
               <input
                 type="text"
                 required
-                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 focus:border-primary transition"
               />
             </div>
 
             <div>
-              <label class="text-sm text-zinc-400">Email Address *</label>
+              <label class="text-sm text-zinc-200">Email Address *</label>
               <input
                 type="email"
                 id="emailField"
                 required
-                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 focus:border-primary transition"
               />
             </div>
           </div>
 
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label class="text-sm text-zinc-400">Phone Number *</label>
+              <label class="text-sm text-zinc-200">Phone Number *</label>
               <input
                 type="text"
                 required
-                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 focus:border-primary transition"
               />
             </div>
 
             <div>
-              <label class="text-sm text-zinc-400">Select Service *</label>
+              <label class="text-sm text-zinc-200">Select Service *</label>
               <select
                 required
-                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+                class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 focus:border-primary transition"
               >
                 <option value="">Choose an Option</option>
                 <option>Cloud Computing</option>
@@ -1330,10 +1838,10 @@
           </div>
 
           <div class="mb-10">
-            <label class="text-sm text-zinc-400">Type Message</label>
+            <label class="text-sm text-zinc-200">Type Message</label>
             <textarea
               rows="4"
-              class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 transition"
+              class="contact-input w-full mt-2 bg-zinc-900 rounded-xl px-4 py-3 outline-none border border-zinc-800 focus:border-primary transition"
             ></textarea>
           </div>
 
@@ -1349,8 +1857,8 @@
     </section>
 
     <!-- INSIGHTS -->
-    <section class="py-24 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
+    <section class="py-12 md:py-16 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <!-- Header -->
         <div class="text-center mb-20 insight-anim-header">
           <span class="text-primary uppercase tracking-widest text-sm">
@@ -1404,11 +1912,12 @@
                 How to Successfully Migrate Your Business to the Cloud
               </h3>
 
-              <div
+              <a
+                href="./404.html"
                 class="read-more text-sm text-zinc-400 flex items-center gap-2 transition"
               >
                 Read More <i class="fa-solid fa-arrow-right"></i>
-              </div>
+              </a>
             </div>
           </article>
 
@@ -1447,11 +1956,12 @@
                 Building a Stronger Workforce with IT Training
               </h3>
 
-              <div
+              <a
+                href="./404.html"
                 class="read-more text-sm text-zinc-400 flex items-center gap-2 transition"
               >
                 Read More <i class="fa-solid fa-arrow-right"></i>
-              </div>
+              </a>
             </div>
           </article>
 
@@ -1490,26 +2000,209 @@
                 Optimizing Your IT Budget: Tips and Strategies
               </h3>
 
-              <div
+              <a
+                href="./404.html"
                 class="read-more text-sm text-zinc-400 flex items-center gap-2 transition"
               >
                 Read More <i class="fa-solid fa-arrow-right"></i>
-              </div>
+              </a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="py-12 md:py-16 overflow-hidden">
+      <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-20 faq-root"
+      >
+        <!-- LEFT -->
+        <div class="faq-left">
+          <span class="text-zinc-200 uppercase tracking-widest text-sm">
+            Read FAQs
+          </span>
+
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight my-6">
+            Quick Answers For Your<br />
+            Important <span class="text-primary">Questions</span>
+          </h2>
+
+          <a
+            href="./404.html"
+            class="inline-flex mt-6 items-center gap-4 bg-secondary group hover-btn rounded-full px-6 py-3 w-fit"
+          >
+            <span>Contact Us</span>
+            <span
+              class="w-10 h-10 flex items-center justify-center bg-primary text-black rounded-full transform -rotate-45 group-hover:rotate-0 transition duration-500 ease-in-out"
+            >
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+
+          <div class="mt-14 bg-zinc-900 rounded-2xl p-6 max-w-sm">
+            <p class="text-zinc-200 mb-6">
+              Getting started is easy! Simply reach out to us through our
+              contact form or give us a call & we’ll schedule.
+            </p>
+
+            <div class="flex items-center gap-4">
+              <img
+                src="./src/assets/contact.webp"
+                class="w-12 h-12 rounded-full object-cover"
+                alt="prof"
+              />
+
+              <div>
+                <p class="text-sm text-zinc-400">Call us now</p>
+                <p class="font-semibold">+1 (888) 333-8181</p>
+              </div>
+
+              <a
+                href="./404.html"
+                class="ml-auto w-12 h-12 rounded-full bg-primary text-black flex items-center justify-center"
+              >
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT FAQ -->
+        <div class="space-y-4 faq-list">
+          <!-- ITEM -->
+          <div class="faq-item bg-secondary/50 rounded-2xl p-6">
+            <button
+              class="w-full flex items-center justify-between cursor-pointer faq-question"
+            >
+              <span class="font-semibold">
+                What services does your company offer?
+              </span>
+              <span
+                class="faq-toggle w-10 h-10 rounded-full bg-black flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="faq-answer overflow-hidden">
+              <p class="text-zinc-400 mt-4">
+                We provide end-to-end IT services including custom software
+                development, cloud computing, cybersecurity, IT consulting,
+                system integration, and ongoing technical support tailored to
+                your business needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-secondary/50 rounded-2xl p-6">
+            <button
+              class="w-full flex items-center justify-between cursor-pointer faq-question"
+            >
+              <span class="font-semibold">
+                How can your IT solutions help my business?
+              </span>
+              <span
+                class="faq-toggle w-10 h-10 rounded-full bg-black flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="faq-answer overflow-hidden">
+              <p class="text-zinc-400 mt-4">
+                Our solutions streamline operations, improve efficiency, enhance
+                security, and support scalability—allowing your business to
+                reduce costs, minimize risks, and grow faster with reliable
+                technology.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-secondary/50 rounded-2xl p-6 ">
+            <button
+              class="w-full flex items-center justify-between cursor-pointer faq-question"
+            >
+              <span class="font-semibold">
+                Do you provide support after project completion?
+              </span>
+              <span
+                class="faq-toggle w-10 h-10 rounded-full bg-black flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="faq-answer overflow-hidden">
+              <p class="text-zinc-400 mt-4">
+                Yes. We offer ongoing maintenance, monitoring, and technical
+                support to ensure your systems remain secure, updated, and fully
+                operational long after deployment.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-secondary/50 rounded-2xl p-6 ">
+            <button
+              class="w-full flex items-center justify-between cursor-pointer faq-question"
+            >
+              <span class="font-semibold">
+                How long does it take to implement an IT solution?
+              </span>
+              <span
+                class="faq-toggle w-10 h-10 rounded-full bg-black flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="faq-answer overflow-hidden">
+              <p class="text-zinc-400 mt-4">
+                Timelines vary depending on project scope and complexity. Small
+                solutions may take weeks, while larger systems can span several
+                months. We always provide clear timelines upfront.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-secondary/50 rounded-2xl p-6">
+            <button
+              class="w-full flex items-center justify-between cursor-pointer faq-question"
+            >
+              <span class="font-semibold">
+                Is my data secure with your solutions?
+              </span>
+              <span
+                class="faq-toggle w-10 h-10 rounded-full bg-black flex items-center justify-center transition"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+
+            <div class="faq-answer overflow-hidden">
+              <p class="text-zinc-400 mt-4">
+                Absolutely. We follow industry-best security practices,
+                including encryption, access control, and continuous monitoring
+                to protect your data and ensure compliance with security
+                standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- MISS OUT -->
-    <section class="py-24 overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
+    <section class="py-12 md:py-16 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div
-          class="bg-primary rounded-3xl px-12 py-14 grid lg:grid-cols-2 gap-12 items-center cta-anim-root"
+          class="bg-primary rounded-3xl px-3 lg:px-12 py-14 grid lg:grid-cols-2 gap-12 items-center cta-anim-root"
         >
           <!-- LEFT -->
           <div class="cta-anim-left">
-            <h2 class="text-5xl font-bold text-black leading-tight">
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight"
+            >
               Don’t Miss Out<br />
               the Future!
             </h2>
@@ -1519,14 +2212,14 @@
           <div class="cta-anim-right">
             <form
               id="subscribeForm"
-              class="flex items-center bg-black rounded-full p-2 mb-6 max-w-xl"
+              class="flex flex-wrap gap-3 items-center mb-8 max-w-xl"
             >
               <input
                 id="emailInput"
                 type="email"
                 required
                 placeholder="Enter email here..."
-                class="flex-1 bg-transparent outline-none px-6 text-sm text-white"
+                class="flex-1 bg-black rounded-full px-6 py-5 outline-none text-sm text-white"
               />
 
               <button
@@ -1546,24 +2239,28 @@
               <span class="text-sm font-medium">Follow us:</span>
 
               <a
+                href="./404.html"
                 class="social-icon w-9 h-9 rounded-full bg-black text-primary flex items-center justify-center transition"
               >
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
 
               <a
+                href="./404.html"
                 class="social-icon w-9 h-9 rounded-full bg-black text-primary flex items-center justify-center transition"
               >
                 <i class="fa-brands fa-instagram"></i>
               </a>
 
               <a
+                href="./404.html"
                 class="social-icon w-9 h-9 rounded-full bg-black text-primary flex items-center justify-center transition"
               >
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
 
               <a
+                href="./404.html"
                 class="social-icon w-9 h-9 rounded-full bg-black text-primary flex items-center justify-center transition"
               >
                 <i class="fa-brands fa-x-twitter"></i>
@@ -1579,7 +2276,7 @@
       <!-- Background glow / waves (approximation only) -->
       <div class="absolute inset-0 opacity-80"></div>
 
-      <div class="relative max-w-7xl mx-auto px-6 footer-anim-root">
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-8 footer-anim-root">
         <!-- Top Grid -->
         <div class="grid lg:grid-cols-4 gap-16 mb-20">
           <!-- Brand -->
@@ -1593,7 +2290,7 @@
               <span class="text-xl font-semibold">StackSolutions</span>
             </div>
 
-            <p class="text-zinc-400 mb-8 max-w-xs">
+            <p class="text-zinc-200 mb-8 max-w-xs">
               Every great solution start understand the time into learn about.
             </p>
 
@@ -1620,7 +2317,7 @@
           <!-- Services -->
           <div class="footer-anim-item">
             <h4 class="font-semibold mb-6">Services</h4>
-            <ul class="space-y-3 text-zinc-400 flex flex-col justify-center">
+            <ul class="space-y-3 text-zinc-200 flex flex-col justify-center">
               <a href="./404.html" class="footer-link transition"
                 >Manage IT Service</a
               >
@@ -1645,7 +2342,7 @@
           <!-- Resources -->
           <div class="footer-anim-item">
             <h4 class="font-semibold mb-6">Resources</h4>
-            <ul class="space-y-3 text-zinc-400 flex flex-col justify-center">
+            <ul class="space-y-3 text-zinc-200 flex flex-col justify-center">
               <a href="./404.html" class="footer-link transition">Contact Us</a>
               <a href="./404.html" class="footer-link transition"
                 >Privacy Policy</a
@@ -1672,7 +2369,7 @@
           <div class="footer-anim-item">
             <h4 class="font-semibold mb-6">Contact Info</h4>
 
-            <p class="text-zinc-400 mb-4">
+            <p class="text-zinc-200 mb-4">
               993 Renner Burg, West Rond,<br />
               MT 94251-030
             </p>
@@ -1696,6 +2393,14 @@
         </div>
       </div>
     </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button
+      aria-label="Scroll to top"
+      class="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-primary text-black flex items-center justify-center shadow-lg scrolltop-btn cursor-pointer"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </button>
 
     <!----------------------------------------------------------------
                                      SCRIPT 
@@ -1727,7 +2432,7 @@
               trigger: el,
               start: "top 75%",
               end: "top 35%",
-              scrub: 0.6, // <-- THIS is smoothness
+              scrub: 1.6, // <-- THIS is smoothness
               markers: false,
             },
           },
@@ -1961,6 +2666,36 @@
       });
     </script>
 
+    <!-- MARQUEE GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const track = document.querySelector(".marquee-track");
+
+      let marqueeTween = gsap.to(track, {
+        xPercent: -50,
+        ease: "none",
+        duration: 18,
+        repeat: -1,
+      });
+
+      /* Pause on hover */
+      track.addEventListener("mouseenter", () => {
+        marqueeTween.pause();
+      });
+
+      track.addEventListener("mouseleave", () => {
+        marqueeTween.resume();
+      });
+
+      /* Start smoothly on scroll */
+      ScrollTrigger.create({
+        trigger: ".marquee-root",
+        start: "top 90%",
+        onEnter: () => marqueeTween.play(),
+      });
+    </script>
+
     <!-- VIDEO GSAP -->
     <script>
       // DOM
@@ -2015,6 +2750,53 @@
 
       closeVidBtn.addEventListener("click", closeModal);
       overlay.addEventListener("click", closeModal);
+    </script>
+
+    <!-- STATS GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* Entrance animation */
+      gsap.from(".stats-anim-card", {
+        opacity: 0,
+        y: 60,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".stats-anim-root",
+          start: "top 80%",
+        },
+      });
+
+      /* Counter animation */
+      const counters = document.querySelectorAll(".stat-number");
+
+      counters.forEach((counter) => {
+        const endValue = parseInt(counter.dataset.value, 10);
+        const suffix = counter.dataset.suffix || "";
+
+        ScrollTrigger.create({
+          trigger: ".stats-anim-root",
+          start: "top 80%",
+          once: true,
+          onEnter: () => {
+            gsap.fromTo(
+              counter,
+              { innerText: 0 },
+              {
+                innerText: endValue,
+                duration: 2,
+                ease: "power1.out",
+                snap: { innerText: 1 },
+                onUpdate: function () {
+                  counter.innerText = Math.floor(counter.innerText) + suffix;
+                },
+              },
+            );
+          },
+        });
+      });
     </script>
 
     <!-- TEAMS GSAP -->
@@ -2081,27 +2863,69 @@
     <script>
       gsap.registerPlugin(ScrollTrigger);
 
-      /* Header animation */
-      gsap.from(".process-anim-header", {
+      /* Left content */
+      gsap.from(".process-left", {
         opacity: 0,
-        y: 80,
+        x: -80,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".process-root",
+          start: "top 75%",
+        },
+      });
+
+      /* Steps */
+      gsap.from(".process-step", {
+        opacity: 0,
+        x: 80,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".process-right",
+          start: "top 75%",
+        },
+      });
+
+      /* Vertical line grow */
+      gsap.from(".process-line", {
+        scaleY: 0,
+        transformOrigin: "top",
+        duration: 1.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".process-right",
+          start: "top 80%",
+        },
+      });
+    </script>
+
+    <!-- TESTIMONIALS GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* Header animation */
+      gsap.from(".testimonial-anim-header", {
+        opacity: 0,
+        y: 60,
         duration: 1,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".process-anim-header",
+          trigger: ".testimonial-anim-header",
           start: "top 80%",
         },
       });
 
       /* Cards stagger */
-      gsap.from(".process-anim-card", {
+      gsap.from(".testimonial-anim-card", {
         opacity: 0,
         y: 60,
         duration: 1,
-        stagger: 0.2,
+        stagger: 0.15,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".process-anim-cards",
+          trigger: ".testimonial-anim-cards",
           start: "top 80%",
         },
       });
@@ -2162,6 +2986,104 @@
 
         // Redirect after submit
         window.location.href = "./404.html";
+      });
+    </script>
+
+    <!-- FAQ GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* Entrance animations */
+      gsap.from(".faq-left", {
+        opacity: 0,
+        x: -80,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".faq-root",
+          start: "top 75%",
+        },
+      });
+
+      gsap.from(".faq-item", {
+        opacity: 0,
+        y: 40,
+        duration: 0.9,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".faq-list",
+          start: "top 80%",
+        },
+      });
+
+      /* Accordion logic */
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const btn = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+        const icon = item.querySelector(".faq-toggle i");
+
+        // initial state
+        gsap.set(answer, { height: 0, opacity: 0 });
+
+        btn.addEventListener("click", () => {
+          const isOpen = item.classList.contains("is-open");
+
+          // CLOSE ALL FIRST
+          faqItems.forEach((otherItem) => {
+            if (otherItem !== item && otherItem.classList.contains("is-open")) {
+              const otherAnswer = otherItem.querySelector(".faq-answer");
+              const otherIcon = otherItem.querySelector(".faq-toggle i");
+
+              gsap.to(otherAnswer, {
+                height: 0,
+                opacity: 0,
+                duration: 0.4,
+                ease: "power2.inOut",
+              });
+
+              gsap.to(otherIcon, {
+                rotate: 0,
+                duration: 0.3,
+              });
+
+              otherItem.classList.remove("is-open");
+            }
+          });
+
+          // TOGGLE CURRENT
+          if (!isOpen) {
+            gsap.to(answer, {
+              height: answer.scrollHeight,
+              opacity: 1,
+              duration: 0.45,
+              ease: "power2.inOut",
+            });
+
+            gsap.to(icon, {
+              rotate: 45,
+              duration: 0.3,
+            });
+
+            item.classList.add("is-open");
+          } else {
+            gsap.to(answer, {
+              height: 0,
+              opacity: 0,
+              duration: 0.4,
+              ease: "power2.inOut",
+            });
+
+            gsap.to(icon, {
+              rotate: 0,
+              duration: 0.3,
+            });
+
+            item.classList.remove("is-open");
+          }
+        });
       });
     </script>
 
@@ -2240,6 +3162,52 @@
           trigger: ".footer-anim-root",
           start: "top 80%",
         },
+      });
+    </script>
+
+    <!-- SCROLL TO TOP GSAP -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const scrollBtn = document.querySelector(".scrolltop-btn");
+
+      /* Initial hidden state */
+      gsap.set(scrollBtn, {
+        autoAlpha: 0,
+        y: 20,
+        pointerEvents: "none",
+      });
+
+      /* Show / hide on scroll */
+      ScrollTrigger.create({
+        start: 300,
+        onEnter: () => {
+          gsap.to(scrollBtn, {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "power3.out",
+            pointerEvents: "auto",
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(scrollBtn, {
+            autoAlpha: 0,
+            y: 20,
+            duration: 0.3,
+            ease: "power3.in",
+            pointerEvents: "none",
+          });
+        },
+      });
+
+      /* Smooth scroll to top */
+      scrollBtn.addEventListener("click", () => {
+        gsap.to(window, {
+          scrollTo: { y: 0 },
+          duration: 1,
+          ease: "power2.out",
+        });
       });
     </script>
 
