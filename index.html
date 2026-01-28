@@ -384,10 +384,10 @@
     </div>
 
     <!-- NAVBAR -->
-    <header class="sticky top-0 z-40">
+    <header  class="sticky top-0 z-40 w-full mx-auto">
       <!-- DESKTOP NAV -->
-      <nav
-        class="max-w-7xl mx-auto flex items-center justify-between w-full px-3 md:px-6 lg:px-12 py-4 bg-secondary overflow-hidden"
+      <nav id="navbar"
+        class="max-w-7xl mx-auto flex items-center justify-between px-3 md:px-6 lg:px-12 py-4 bg-secondary overflow-hidden"
       >
         <!-- LOGO -->
         <div class="text-xl font-bold">
@@ -475,7 +475,7 @@
     </header>
 
     <!-- HOME -->
-    <main class="relative overflow-hidden">
+    <main id="home" class="relative overflow-hidden">
       <div
         class="max-w-7xl mx-auto px-6 lg:px-8 py-6 grid xllg:grid-cols-2 gap-16 items-center"
       >
@@ -1891,7 +1891,6 @@
             class="contact-btn bg-primary text-black px-10 py-4 rounded-full font-medium inline-flex items-center gap-3 transition"
           >
             Send Message
-            <i class="fa-solid fa-arrow-up-right"></i>
           </button>
         </form>
       </div>
@@ -2267,7 +2266,7 @@
 
               <button
                 type="submit"
-                class="subscribe-btn bg-zinc-900 text-white px-6 py-3 rounded-full flex items-center gap-3 transition"
+                class="subscribe-btn bg-zinc-900 text-white px-6 py-3 rounded-full flex items-center gap-3 transition cursor-pointer"
               >
                 Subscribe Now
                 <span
@@ -3339,6 +3338,53 @@
 
       // Disable lag smoothing in GSAP to prevent any delay in scroll animations
       gsap.ticker.lagSmoothing(0);
+    </script>
+
+    <!-- ROUNDED NAVBAR ANIMATION JS -->
+    <script>
+      const navbar = document.getElementById("navbar");
+      const home = document.getElementById("home");
+
+      let isFlat = false;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          // SCROLL DOWN → HOME OUT
+          if (!entry.isIntersecting && !isFlat) {
+            isFlat = true;
+
+            gsap.fromTo(
+              navbar,
+              {
+                opacity: 0,
+                y: -200,
+              },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 1.8,
+                ease: "power3.out",
+              },
+            );
+          }
+
+          // SCROLL UP → HOME IN
+          if (entry.isIntersecting && isFlat) {
+            isFlat = false;
+
+            gsap.to(navbar, {
+              duration: 0.8,
+              ease: "power3.out",
+            });
+          }
+        },
+        {
+          threshold: 0,
+          rootMargin: "-100px 0px 0px 0px",
+        },
+      );
+
+      observer.observe(home);
     </script>
   </body>
 </html>
