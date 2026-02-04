@@ -384,9 +384,10 @@
     </div>
 
     <!-- NAVBAR -->
-    <header  class="sticky top-0 z-40 w-full mx-auto">
+    <header class="sticky top-0 z-40 w-full mx-auto">
       <!-- DESKTOP NAV -->
-      <nav id="navbar"
+      <nav
+        id="navbar"
         class="max-w-7xl mx-auto flex items-center justify-between px-3 md:px-6 lg:px-12 py-4 bg-secondary overflow-hidden"
       >
         <!-- LOGO -->
@@ -3314,13 +3315,7 @@
     <!-- LENIS JS -->
     <script>
       // Initialize a new Lenis instance for smooth scrolling
-      const lenis = new Lenis({
-        duration: 1.3, // Smoothness (1–1.5 recommended)
-        // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Natural ease
-        easing: (t) => 1 - Math.pow(1 - t, 4),
-        smoothWheel: true, // Mouse wheel smoothing
-        smoothTouch: false, // Disable on mobile (better UX)
-      });
+      const lenis = new Lenis();
 
       // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
       lenis.on("scroll", ScrollTrigger.update);
